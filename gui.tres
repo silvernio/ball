@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://6thw543k5i1t"]
+[gd_resource type="Theme" format=3 uid="uid://6thw543k5i1t"]
 
 [ext_resource type="FontFile" uid="uid://b8uixwqpu4o2d" path="res://fortyfive/Fortyfive.ttf" id="1_gv4p5"]
 [ext_resource type="FontFile" uid="uid://du6t0nvtj3kim" path="res://Fortyfive.ttf" id="2_yy6fd"]

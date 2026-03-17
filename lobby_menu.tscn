@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://c51hjd1iarkfj"]
+[gd_scene format=3 uid="uid://c51hjd1iarkfj"]
 
 [ext_resource type="Theme" uid="uid://6thw543k5i1t" path="res://gui.tres" id="1_eicbr"]
 [ext_resource type="Script" uid="uid://dkbwj0skicqp0" path="res://lobby_menu.gd" id="1_nv5w8"]
-[ext_resource type="Texture2D" uid="uid://bkknqe4kfbj16" path="res://loadingToGame.png" id="3_eicbr"]
+[ext_resource type="Texture2D" uid="uid://dufd60ak5nkwo" path="res://images/loading to game.png" id="3_iu37i"]
 [ext_resource type="Texture2D" uid="uid://dkpcbqblad3hv" path="res://leavingGame.png" id="4_iu37i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_10hg3"]
@@ -231,7 +231,7 @@ _data = {
 &"sceneOut": SubResource("Animation_iohss")
 }
 
-[node name="lobby_menu" type="Control"]
+[node name="lobby_menu" type="Control" unique_id=2111721308]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -241,7 +241,7 @@ grow_vertical = 2
 theme = ExtResource("1_eicbr")
 script = ExtResource("1_nv5w8")
 
-[node name="start" type="Button" parent="."]
+[node name="start" type="Button" parent="." unique_id=1175586044]
 texture_filter = 1
 layout_mode = 0
 offset_left = 506.0
@@ -252,7 +252,7 @@ theme_override_font_sizes/font_size = 60
 toggle_mode = true
 text = "Start Game"
 
-[node name="playerList" type="ItemList" parent="."]
+[node name="playerList" type="ItemList" parent="." unique_id=105094943]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 95.0
@@ -260,7 +260,7 @@ offset_right = 452.0
 offset_bottom = 541.0
 theme_override_font_sizes/font_size = 35
 
-[node name="hostName" type="Label" parent="."]
+[node name="hostName" type="Label" parent="." unique_id=431262057]
 texture_filter = 1
 layout_mode = 0
 offset_left = 10.0
@@ -273,21 +273,21 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 56
 text = "'s lobby"
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=667201083]
 modulate = Color(0.14406255, 0.14406255, 0.14406255, 1)
 position = Vector2(823.00006, 274)
 scale = Vector2(633.25, 535.625)
 mesh = SubResource("BoxMesh_10hg3")
 
-[node name="track" type="Control" parent="."]
+[node name="track" type="Control" parent="." unique_id=1587318347]
 anchors_preset = 0
 
-[node name="seed" type="Control" parent="track"]
+[node name="seed" type="Control" parent="track" unique_id=1530587722]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="seedLabel" type="Label" parent="track/seed"]
+[node name="seedLabel" type="Label" parent="track/seed" unique_id=2123386682]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -301,7 +301,7 @@ theme_override_font_sizes/font_size = 28
 text = "Seed"
 metadata/_edit_use_anchors_ = true
 
-[node name="seed" type="SpinBox" parent="track/seed"]
+[node name="seed" type="SpinBox" parent="track/seed" unique_id=719329069]
 layout_mode = 0
 offset_left = 514.0
 offset_top = 48.0
@@ -309,7 +309,7 @@ offset_right = 932.0
 offset_bottom = 79.0
 max_value = inf
 
-[node name="randomise" type="CheckBox" parent="track/seed"]
+[node name="randomise" type="CheckBox" parent="track/seed" unique_id=786558469]
 layout_mode = 0
 offset_left = 517.0
 offset_top = 88.0
@@ -318,7 +318,7 @@ offset_bottom = 119.0
 button_pressed = true
 text = "Randomise Seed"
 
-[node name="randomise" type="CheckBox" parent="track"]
+[node name="randomise" type="CheckBox" parent="track" unique_id=820815574]
 layout_mode = 0
 offset_left = 679.0
 offset_top = 88.0
@@ -326,12 +326,12 @@ offset_right = 850.0
 offset_bottom = 119.0
 text = "Randomise settings"
 
-[node name="length" type="Control" parent="track"]
+[node name="length" type="Control" parent="track" unique_id=56386676]
 anchors_preset = 0
 offset_top = 113.0
 offset_bottom = 113.0
 
-[node name="lengthVal" type="HSlider" parent="track/length"]
+[node name="lengthVal" type="HSlider" parent="track/length" unique_id=1482633763]
 layout_mode = 0
 offset_left = 513.0
 offset_top = 51.0
@@ -344,7 +344,7 @@ step = 10.0
 value = 100.0
 metadata/_edit_use_anchors_ = true
 
-[node name="lengthLabel" type="Label" parent="track/length"]
+[node name="lengthLabel" type="Label" parent="track/length" unique_id=1464769341]
 texture_filter = 1
 layout_mode = 0
 offset_left = 513.0
@@ -355,7 +355,7 @@ theme_override_font_sizes/font_size = 28
 text = "Track length"
 metadata/_edit_use_anchors_ = true
 
-[node name="lengthBox" type="SpinBox" parent="track/length"]
+[node name="lengthBox" type="SpinBox" parent="track/length" unique_id=1469767187]
 layout_mode = 0
 offset_left = 846.0
 offset_top = 42.0
@@ -366,12 +366,12 @@ max_value = 99999.0
 value = 100.0
 metadata/_edit_use_anchors_ = true
 
-[node name="turning" type="Control" parent="track"]
+[node name="turning" type="Control" parent="track" unique_id=329729720]
 anchors_preset = 0
 offset_top = 113.0
 offset_bottom = 113.0
 
-[node name="turningVal" type="HSlider" parent="track/turning"]
+[node name="turningVal" type="HSlider" parent="track/turning" unique_id=1016615383]
 layout_mode = 0
 offset_left = 513.0
 offset_top = 112.0
@@ -384,7 +384,7 @@ step = 0.1
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="turningLabel" type="Label" parent="track/turning"]
+[node name="turningLabel" type="Label" parent="track/turning" unique_id=1659617537]
 texture_filter = 1
 layout_mode = 0
 offset_left = 513.0
@@ -395,7 +395,7 @@ theme_override_font_sizes/font_size = 28
 text = "Turning intensity"
 metadata/_edit_use_anchors_ = true
 
-[node name="turningBox" type="SpinBox" parent="track/turning"]
+[node name="turningBox" type="SpinBox" parent="track/turning" unique_id=913679764]
 layout_mode = 0
 offset_left = 846.0
 offset_top = 103.0
@@ -407,12 +407,12 @@ step = 0.1
 value = 0.5
 metadata/_edit_use_anchors_ = true
 
-[node name="size" type="Control" parent="track"]
+[node name="size" type="Control" parent="track" unique_id=760656755]
 anchors_preset = 0
 offset_top = 113.0
 offset_bottom = 113.0
 
-[node name="sizeVal" type="HSlider" parent="track/size"]
+[node name="sizeVal" type="HSlider" parent="track/size" unique_id=570424549]
 layout_mode = 0
 offset_left = 513.0
 offset_top = 172.0
@@ -425,7 +425,7 @@ step = 0.1
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="sizeLabel" type="Label" parent="track/size"]
+[node name="sizeLabel" type="Label" parent="track/size" unique_id=1783075342]
 texture_filter = 1
 layout_mode = 0
 offset_left = 513.0
@@ -436,7 +436,7 @@ theme_override_font_sizes/font_size = 28
 text = "Track size"
 metadata/_edit_use_anchors_ = true
 
-[node name="sizeBox" type="SpinBox" parent="track/size"]
+[node name="sizeBox" type="SpinBox" parent="track/size" unique_id=1680685264]
 layout_mode = 0
 offset_left = 846.0
 offset_top = 163.0
@@ -448,12 +448,12 @@ step = 0.1
 value = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="globalChance" type="Control" parent="track"]
+[node name="globalChance" type="Control" parent="track" unique_id=1264171553]
 anchors_preset = 0
 offset_top = 167.0
 offset_bottom = 167.0
 
-[node name="globalVal" type="HSlider" parent="track/globalChance"]
+[node name="globalVal" type="HSlider" parent="track/globalChance" unique_id=1400018891]
 layout_mode = 0
 offset_left = 513.0
 offset_top = 176.0
@@ -463,7 +463,7 @@ tooltip_text = "increase or decrease the chance for a global modifier"
 max_value = 5.0
 value = 3.0
 
-[node name="globalLabel" type="Label" parent="track/globalChance"]
+[node name="globalLabel" type="Label" parent="track/globalChance" unique_id=450594220]
 texture_filter = 1
 layout_mode = 0
 offset_left = 513.0
@@ -473,7 +473,7 @@ offset_bottom = 176.0
 theme_override_font_sizes/font_size = 28
 text = "chance for global modifier"
 
-[node name="globlValLabel" type="Label" parent="track/globalChance"]
+[node name="globlValLabel" type="Label" parent="track/globalChance" unique_id=403619039]
 texture_filter = 1
 layout_mode = 0
 offset_left = 848.0
@@ -483,15 +483,15 @@ offset_bottom = 193.0
 theme_override_font_sizes/font_size = 19
 text = "1 in 3"
 
-[node name="player" type="Control" parent="."]
+[node name="player" type="Control" parent="." unique_id=944672525]
 anchors_preset = 0
 offset_top = 114.0
 offset_bottom = 114.0
 
-[node name="jumps" type="Control" parent="player"]
+[node name="jumps" type="Control" parent="player" unique_id=1012158316]
 anchors_preset = 0
 
-[node name="jumpBox" type="CheckBox" parent="player/jumps"]
+[node name="jumpBox" type="CheckBox" parent="player/jumps" unique_id=299230483]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -503,7 +503,7 @@ scale = Vector2(1.565, 1.565)
 tooltip_text = "disable or enable jumping"
 theme_override_font_sizes/font_size = 16
 
-[node name="jumpLabel" type="Label" parent="player/jumps"]
+[node name="jumpLabel" type="Label" parent="player/jumps" unique_id=1508385285]
 texture_filter = 1
 layout_mode = 0
 offset_left = 513.0
@@ -513,7 +513,7 @@ offset_bottom = 285.0
 theme_override_font_sizes/font_size = 28
 text = "Jumps"
 
-[node name="jumpLabel2" type="Label" parent="player/jumps"]
+[node name="jumpLabel2" type="Label" parent="player/jumps" unique_id=340632606]
 texture_filter = 1
 layout_mode = 0
 offset_left = 544.0
@@ -523,10 +523,10 @@ offset_bottom = 302.0
 theme_override_font_sizes/font_size = 19
 text = "Disabled"
 
-[node name="speed" type="Control" parent="player"]
+[node name="speed" type="Control" parent="player" unique_id=1474723922]
 anchors_preset = 0
 
-[node name="speedVal" type="HSlider" parent="player/speed"]
+[node name="speedVal" type="HSlider" parent="player/speed" unique_id=372759654]
 layout_mode = 0
 offset_left = 513.0
 offset_top = 350.0
@@ -537,7 +537,7 @@ min_value = 1.0
 max_value = 8.0
 value = 5.0
 
-[node name="speedLabel" type="Label" parent="player/speed"]
+[node name="speedLabel" type="Label" parent="player/speed" unique_id=1464575147]
 texture_filter = 1
 layout_mode = 0
 offset_left = 513.0
@@ -547,7 +547,7 @@ offset_bottom = 350.0
 theme_override_font_sizes/font_size = 28
 text = "Player speed"
 
-[node name="speedBox" type="SpinBox" parent="player/speed"]
+[node name="speedBox" type="SpinBox" parent="player/speed" unique_id=1594346291]
 layout_mode = 0
 offset_left = 846.0
 offset_top = 341.0
@@ -557,7 +557,7 @@ min_value = 1.0
 max_value = 8.0
 value = 5.0
 
-[node name="exitButton" type="Button" parent="."]
+[node name="exitButton" type="Button" parent="." unique_id=135083667]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 552.0
@@ -567,25 +567,23 @@ theme_override_font_sizes/font_size = 58
 text = "return"
 expand_icon = true
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1881340629]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(590, -567)
 scale = Vector2(1594.1149, 913.00006)
 mesh = SubResource("BoxMesh_nv5w8")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=802398936]
 root_node = NodePath("../MeshInstance2D2")
-libraries = {
-&"": SubResource("AnimationLibrary_iu37i")
-}
+libraries/ = SubResource("AnimationLibrary_iu37i")
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=641749829]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(594.4433, 1347.1521)
 scale = Vector2(-1993.2571, 1082.1482)
 mesh = SubResource("BoxMesh_nv5w8")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1347478728]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -595,10 +593,10 @@ offset_top = 883.35
 offset_right = 575.9999
 offset_bottom = 1531.3503
 grow_horizontal = 2
-texture = ExtResource("3_eicbr")
+texture = ExtResource("3_iu37i")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1011975036]
 layout_mode = 0
 offset_left = -1504.0
 offset_top = 8.0
