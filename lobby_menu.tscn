@@ -19,7 +19,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(590, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(562, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -30,7 +30,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(-567, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(311, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
@@ -569,7 +569,7 @@ expand_icon = true
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1881340629]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(590, -567)
+position = Vector2(562, 311)
 scale = Vector2(1594.1149, 913.00006)
 mesh = SubResource("BoxMesh_nv5w8")
 
