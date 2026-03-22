@@ -1,28 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://tg76e0poxjuq"]
+[gd_scene format=3 uid="uid://tg76e0poxjuq"]
 
 [ext_resource type="Script" uid="uid://kgfggrkfqx17" path="res://network.gd" id="1_qmnym"]
 [ext_resource type="Script" uid="uid://bxuwu2qsr7kx6" path="res://addons/godot-socketio/socketio.gd" id="2_n0pfp"]
 
-[node name="network" type="Node"]
+[node name="network" type="Node" unique_id=264544561]
 script = ExtResource("1_qmnym")
 
-[node name="SocketIO" type="Node" parent="."]
+[node name="SocketIO" type="Node" parent="." unique_id=1283406504]
 script = ExtResource("2_n0pfp")
 default_namespace = "ball"
 socket_path = "/socket/socket.io"
 base_url = "https://server.silverspace.io"
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=887139399]
 wait_time = 0.05
 autostart = true
 
-[node name="Timer2" type="Timer" parent="."]
+[node name="Timer2" type="Timer" parent="." unique_id=494247793]
 
-[node name="sync" type="Timer" parent="."]
+[node name="sync" type="Timer" parent="." unique_id=927998867]
 wait_time = 10.0
 autostart = true
 
-[node name="reconnect" type="Timer" parent="."]
+[node name="reconnect" type="Timer" parent="." unique_id=488579590]
 wait_time = 2.0
 one_shot = true
 

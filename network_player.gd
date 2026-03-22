@@ -40,7 +40,7 @@ var channel: WebRTCDataChannel
 var eventChannel: WebRTCDataChannel
 var myId = 0
 
-var relay = false
+var relay = true
 
 var connected = false
 
