@@ -8,8 +8,7 @@ script = ExtResource("1_qmnym")
 
 [node name="SocketIO" type="Node" parent="." unique_id=1283406504]
 script = ExtResource("2_n0pfp")
-default_namespace = "ball"
-socket_path = "/socket/socket.io"
+socket_path = "/ball/socket.io"
 base_url = "https://server.silverspace.io"
 
 [node name="Timer" type="Timer" parent="." unique_id=887139399]
