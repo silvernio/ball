@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4n0jm82clx84"]
+[gd_scene format=3 uid="uid://b4n0jm82clx84"]
 
 [ext_resource type="Theme" uid="uid://6thw543k5i1t" path="res://gui.tres" id="1_lbr8e"]
 [ext_resource type="Script" uid="uid://dxp3ql7dk3oow" path="res://options_menu.gd" id="1_t1lix"]
@@ -227,10 +227,76 @@ tracks/19/keys = {
 "points": PackedFloat32Array(568, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("fov:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(475, -0.2125, 0, 0.2125, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("fov:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-682, -0.2125, 0, 0.2125, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("fovBox:position:x")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(591, -0.2125, 0, 0.2125, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("fovBox:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-682, -0.2125, 0, 0.2125, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("fovSlider:position:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(404, -0.2125, 0, 0.2125, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("fovSlider:position:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-651, -0.2125, 0, 0.2125, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="Animation" id="Animation_6bffs"]
 resource_name = "inGameOptions"
-length = 0.425
+length = 0.525
 step = 0.025
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -452,10 +518,76 @@ tracks/19/keys = {
 "points": PackedFloat32Array(568, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("fov:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(475, -0.2125, 0, 0.2125, 0, 475, -0.054166667, 0, 0, 0),
+"times": PackedFloat32Array(0.15, 0.45)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("fov:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-682, -0.2125, 0, 0.2125, 0, 119, -0.054166667, -133.5, 0, 0),
+"times": PackedFloat32Array(0.15, 0.45)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("fovBox:position:x")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(591, -0.2125, 0, 0.2125, 0, 591, -0.054166667, 0, 0, 0),
+"times": PackedFloat32Array(0.175, 0.475)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("fovBox:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 2),
+"points": PackedFloat32Array(-682, -0.2125, 0, 0.2125, 0, 119, -0.054166667, -133.5, 0, 0),
+"times": PackedFloat32Array(0.175, 0.475)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("fovSlider:position:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(404, -0.2125, 0, 0.2125, 0, 404, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0.2, 0.5)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("fovSlider:position:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-651, -0.2125, 0, 0.2125, 0, 152, -0.050000004, -133.83334, 0, 0),
+"times": PackedFloat32Array(0.2, 0.5)
+}
 
 [sub_resource type="Animation" id="Animation_t1lix"]
 resource_name = "optionsPressed"
-length = 0.425
+length = 0.5
 step = 0.025
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -677,6 +809,72 @@ tracks/19/keys = {
 "points": PackedFloat32Array(568, -0.25, 0, 0.25, 0, 568, -0.050000004, 0, 0, 0),
 "times": PackedFloat32Array(0.099999994, 0.3)
 }
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("fov:position:x")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(475, -0.25, 0, 0.25, 0, 475, -0.054166667, 0, 0, 0),
+"times": PackedFloat32Array(0.15, 0.45)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("fov:position:y")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-682, -0.25, 0, 0.25, 0, 119, -0.054166667, -133.5, 0, 0),
+"times": PackedFloat32Array(0.15, 0.45)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("fovBox:position:x")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(591, -0.25, 0, 0.25, 0, 591, -0.054166667, 0, 0, 0),
+"times": PackedFloat32Array(0.175, 0.475)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("fovBox:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-682, -0.25, 0, 0.25, 0, 119, -0.054166667, -133.5, 0, 0),
+"times": PackedFloat32Array(0.175, 0.475)
+}
+tracks/24/type = "bezier"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("fovSlider:position:x")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(404, -0.25, 0, 0.25, 0, 404, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0.2, 0.5)
+}
+tracks/25/type = "bezier"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("fovSlider:position:y")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(-651, -0.25, 0, 0.25, 0, 152, -0.050000004, -133.83334, 0, 0),
+"times": PackedFloat32Array(0.2, 0.5)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ogda5"]
 _data = {
@@ -685,7 +883,7 @@ _data = {
 &"optionsPressed": SubResource("Animation_t1lix")
 }
 
-[node name="optionsMenu" type="Control"]
+[node name="optionsMenu" type="Control" unique_id=83894797]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -694,24 +892,24 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t1lix")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=450242664]
 modulate = Color(0.25882354, 0.25882354, 0.25882354, 0)
 position = Vector2(576, 324)
 scale = Vector2(1168.0001, 664)
 mesh = SubResource("BoxMesh_t1lix")
 
-[node name="back" type="Button" parent="."]
+[node name="back" type="Button" parent="." unique_id=1161229252]
 layout_mode = 0
 offset_left = -288.0
 offset_top = 568.0
-offset_right = -36.99994
+offset_right = -37.00006
 offset_bottom = 626.0
 theme = ExtResource("1_lbr8e")
 theme_override_font_sizes/font_size = 36
 text = "return
 "
 
-[node name="volume" type="Label" parent="."]
+[node name="volume" type="Label" parent="." unique_id=231886962]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -719,7 +917,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -97.0
 offset_top = -792.0
-offset_right = 16.0
+offset_right = 15.999878
 offset_bottom = -760.0
 grow_horizontal = 2
 theme = ExtResource("1_lbr8e")
@@ -728,7 +926,21 @@ text = "Main Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="volSlider" type="HSlider" parent="."]
+[node name="volBox" type="SpinBox" parent="." unique_id=1152963678]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 15.0
+offset_top = -792.0
+offset_right = 103.0
+offset_bottom = -760.0
+grow_horizontal = 2
+theme = ExtResource("1_lbr8e")
+value = 100.0
+
+[node name="volSlider" type="HSlider" parent="." unique_id=1942706407]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -741,21 +953,7 @@ offset_bottom = -744.9999
 grow_horizontal = 2
 value = 100.0
 
-[node name="volBox" type="SpinBox" parent="."]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 15.0
-offset_top = -792.0
-offset_right = 103.0
-offset_bottom = -760.0
-grow_horizontal = 2
-theme = ExtResource("1_lbr8e")
-value = 100.0
-
-[node name="volumeMusic" type="Label" parent="."]
+[node name="volumeMusic" type="Label" parent="." unique_id=156326424]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -763,7 +961,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -101.0
 offset_top = -737.0
-offset_right = 12.0
+offset_right = 12.000122
 offset_bottom = -705.0
 grow_horizontal = 2
 theme = ExtResource("1_lbr8e")
@@ -772,7 +970,21 @@ text = "Music Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="volSliderMusic" type="HSlider" parent="."]
+[node name="volBoxMusic" type="SpinBox" parent="." unique_id=1708505552]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 15.0
+offset_top = -737.0
+offset_right = 103.0
+offset_bottom = -705.0
+grow_horizontal = 2
+theme = ExtResource("1_lbr8e")
+value = 100.0
+
+[node name="volSliderMusic" type="HSlider" parent="." unique_id=488055911]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -785,26 +997,54 @@ offset_bottom = -689.9999
 grow_horizontal = 2
 value = 100.0
 
-[node name="volBoxMusic" type="SpinBox" parent="."]
+[node name="fov" type="Label" parent="." unique_id=1699855838]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.0
+offset_top = -682.0
+offset_right = 12.0
+offset_bottom = -650.0
+grow_horizontal = 2
+theme = ExtResource("1_lbr8e")
+theme_override_font_sizes/font_size = 19
+text = "FOV"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fovBox" type="SpinBox" parent="." unique_id=538419728]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 15.0
-offset_top = -737.0
+offset_top = -682.0
 offset_right = 103.0
-offset_bottom = -705.0
+offset_bottom = -650.0
 grow_horizontal = 2
 theme = ExtResource("1_lbr8e")
 value = 100.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ogda5")
-}
+[node name="fovSlider" type="HSlider" parent="." unique_id=1936278140]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -172.0
+offset_top = -651.0
+offset_right = 172.0
+offset_bottom = -634.9999
+grow_horizontal = 2
+value = 100.0
 
-[node name="inGameBack" type="Button" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=78465752]
+libraries/ = SubResource("AnimationLibrary_ogda5")
+
+[node name="inGameBack" type="Button" parent="." unique_id=18720279]
 layout_mode = 0
 offset_left = -288.0
 offset_top = 568.0
@@ -816,15 +1056,15 @@ text = "return
 "
 
 [connection signal="mouse_entered" from="back" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="back" to="." method="_clicksound"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="volBox" to="." method="_on_mouse_hover"]
 [connection signal="mouse_entered" from="volSlider" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="volSlider" to="." method="_on_vol_slider_value_changed"]
-[connection signal="mouse_entered" from="volBox" to="." method="_on_mouse_hover"]
-[connection signal="mouse_entered" from="volSliderMusic" to="." method="_on_mouse_hover"]
-[connection signal="value_changed" from="volSliderMusic" to="." method="_on_vol_slider_music_value_changed"]
 [connection signal="mouse_entered" from="volBoxMusic" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="volBoxMusic" to="." method="_on_vol_box_music_value_changed"]
+[connection signal="mouse_entered" from="volSliderMusic" to="." method="_on_mouse_hover"]
+[connection signal="value_changed" from="volSliderMusic" to="." method="_on_vol_slider_music_value_changed"]
 [connection signal="mouse_entered" from="inGameBack" to="." method="_on_mouse_hover"]
 [connection signal="pressed" from="inGameBack" to="." method="_clicksound"]
 [connection signal="pressed" from="inGameBack" to="." method="_on_in_game_back_pressed"]
