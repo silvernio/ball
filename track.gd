@@ -100,6 +100,8 @@ func generate_track():
 				currentType = 3
 			if Network.globalMod == 'sticky':
 				currentType = 1
+			if Network.globalMod == 'boost':
+				currentType = 4
 			
 			types.append(currentType)
 		

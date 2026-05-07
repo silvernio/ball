@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://cplji6psrpo8t"]
+[gd_scene format=3 uid="uid://cplji6psrpo8t"]
 
 [ext_resource type="Script" uid="uid://57v0fg1vf783" path="res://game.gd" id="1_vef74"]
 [ext_resource type="PackedScene" uid="uid://cn8pmff4bbixf" path="res://track.tscn" id="2_e2o6t"]
@@ -625,39 +625,39 @@ _data = {
 
 [sub_resource type="BoxMesh" id="BoxMesh_215e1"]
 
-[node name="world" type="Node3D" node_paths=PackedStringArray("player", "camera", "start")]
+[node name="world" type="Node3D" unique_id=1181185246 node_paths=PackedStringArray("player", "camera", "start")]
 script = ExtResource("1_vef74")
 player = NodePath("player")
 camera = NodePath("camera")
 start = NodePath("CanvasLayer/Control/start")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=435637244]
 transform = Transform3D(0.9219646, 0.22110593, -0.31795204, 0, 0.82099974, 0.5709286, 0.38727424, -0.52637595, 0.7569327, 0, 1.0497183, 0)
 light_energy = 1.25
 shadow_enabled = true
 shadow_opacity = 0.8
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1721659255]
 environment = SubResource("Environment_e2o6t")
 
-[node name="track" parent="." node_paths=PackedStringArray("finish", "islands") instance=ExtResource("2_e2o6t")]
+[node name="track" parent="." unique_id=307664082 node_paths=PackedStringArray("finish", "islands") instance=ExtResource("2_e2o6t")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, -0.42035323, 0.5572126)
 top_level = true
 finish = NodePath("../finish")
 island = ExtResource("11_mfdv2")
 islands = NodePath("../islands")
 
-[node name="player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("2_feb5d")]
+[node name="player" parent="." unique_id=1172594184 node_paths=PackedStringArray("camera") instance=ExtResource("2_feb5d")]
 camera = NodePath("../camera")
 
-[node name="players" type="Node3D" parent="." node_paths=PackedStringArray("playersList", "player")]
+[node name="players" type="Node3D" parent="." unique_id=561818735 node_paths=PackedStringArray("playersList", "player")]
 script = ExtResource("3_feb5d")
 playerInstance = ExtResource("4_fc0e3")
 playersList = NodePath("../CanvasLayer/Control/PanelContainer/MarginContainer/players")
 playerElement = ExtResource("7_eow3j")
 player = NodePath("../player")
 
-[node name="camera" type="Camera3D" parent="." node_paths=PackedStringArray("player", "players")]
+[node name="camera" type="Camera3D" parent="." unique_id=375904537 node_paths=PackedStringArray("player", "players")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
 rotation_edit_mode = 1
 current = true
@@ -665,122 +665,122 @@ script = ExtResource("5_7jktm")
 player = NodePath("../player")
 players = NodePath("../players")
 
-[node name="random" type="Node3D" parent="."]
+[node name="random" type="Node3D" parent="." unique_id=1376482154]
 
-[node name="platform" type="StaticBody3D" parent="random"]
+[node name="platform" type="StaticBody3D" parent="random" unique_id=656931517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5836864, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform" unique_id=2136472144]
 mesh = SubResource("CylinderMesh_ryrav")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform" unique_id=871109394]
 shape = SubResource("CylinderShape3D_eow3j")
 
-[node name="platform2" type="StaticBody3D" parent="random"]
+[node name="platform2" type="StaticBody3D" parent="random" unique_id=263619817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3067126, 0.22626007, 0.5589342)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform2" unique_id=95366334]
 mesh = SubResource("CylinderMesh_ryrav")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform2" unique_id=1216283816]
 shape = SubResource("CylinderShape3D_eow3j")
 
-[node name="platform3" type="StaticBody3D" parent="random"]
+[node name="platform3" type="StaticBody3D" parent="random" unique_id=398973172]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4918017, 0.48135495, 1.8020115)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform3" unique_id=1309842893]
 mesh = SubResource("CylinderMesh_ryrav")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform3"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform3" unique_id=970441802]
 shape = SubResource("CylinderShape3D_eow3j")
 
-[node name="platform4" type="StaticBody3D" parent="random"]
+[node name="platform4" type="StaticBody3D" parent="random" unique_id=1714697284]
 transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, -9.076912, 0.86461616, 7.137403)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform4" unique_id=2005071409]
 mesh = SubResource("CylinderMesh_ryrav")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform4"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform4" unique_id=89628205]
 shape = SubResource("CylinderShape3D_eow3j")
 
-[node name="platform5" type="StaticBody3D" parent="random"]
+[node name="platform5" type="StaticBody3D" parent="random" unique_id=1008634351]
 transform = Transform3D(0.06407263, -0.7677692, 0, 0.07677692, 0.64072627, 0, 0, 0, 1, -9.772379, 1.2007, 8.715789)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform5"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform5" unique_id=881563383]
 mesh = SubResource("BoxMesh_eow3j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform5"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform5" unique_id=1098146229]
 transform = Transform3D(0.9999999, 0, 0, 3.7252903e-09, 0.99999994, 0, 0, 0, 1, -0.06167984, -0.0051469803, 0)
 shape = SubResource("BoxShape3D_j5wjh")
 
-[node name="platform6" type="StaticBody3D" parent="random"]
+[node name="platform6" type="StaticBody3D" parent="random" unique_id=976445733]
 transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 3, -10.447073, 1.4176397, 5.8527718)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform6"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform6" unique_id=1877895674]
 mesh = SubResource("BoxMesh_eow3j")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform6"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform6" unique_id=63987168]
 shape = SubResource("BoxShape3D_j5wjh")
 
-[node name="platform7" type="StaticBody3D" parent="random"]
+[node name="platform7" type="StaticBody3D" parent="random" unique_id=764488127]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.016238, 1.4176397, 8.480355)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform7"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform7" unique_id=1020334444]
 mesh = SubResource("SphereMesh_j5wjh")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform7"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform7" unique_id=231371828]
 shape = SubResource("SphereShape3D_7jktm")
 
-[node name="platform8" type="StaticBody3D" parent="random"]
+[node name="platform8" type="StaticBody3D" parent="random" unique_id=1920455952]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3660655, 1.4176397, 9.887925)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform8"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform8" unique_id=1148078925]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5905715, 0)
 mesh = SubResource("TorusMesh_hve3p")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform8"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform8" unique_id=378287606]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5905715, 0)
 shape = SubResource("ConcavePolygonShape3D_mfdv2")
 
-[node name="platform9" type="StaticBody3D" parent="random"]
+[node name="platform9" type="StaticBody3D" parent="random" unique_id=481320619]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3660655, 2.1848636, 9.887925)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform9"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform9" unique_id=1217055672]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5905715, 0)
 mesh = SubResource("TorusMesh_hve3p")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform9"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform9" unique_id=302086770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5905715, 0)
 shape = SubResource("ConcavePolygonShape3D_mfdv2")
 
-[node name="platform10" type="StaticBody3D" parent="random"]
+[node name="platform10" type="StaticBody3D" parent="random" unique_id=757266518]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3660655, 2.9740796, 9.887925)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform10"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform10" unique_id=1042355278]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5905715, 0)
 mesh = SubResource("TorusMesh_hve3p")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform10"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random/platform10" unique_id=1973203995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5905715, 0)
 shape = SubResource("ConcavePolygonShape3D_mfdv2")
 
-[node name="finish" type="Area3D" parent="."]
+[node name="finish" type="Area3D" parent="." unique_id=159195265]
 physics_interpolation_mode = 1
 visible = false
 script = ExtResource("8_j5wjh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="finish"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="finish" unique_id=1862362573]
 mesh = SubResource("BoxMesh_vef74")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="finish"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="finish" unique_id=30674981]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.2706543)
 shape = SubResource("BoxShape3D_vef74")
 
-[node name="islands" type="Node3D" parent="."]
+[node name="islands" type="Node3D" parent="." unique_id=1095825207]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1907876770]
 
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=48700660]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -791,29 +791,29 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("6_ryrav")
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=1521327605]
 layout_mode = 0
 theme = ExtResource("6_ryrav")
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control"]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Control" unique_id=99638742]
 layout_mode = 0
 offset_right = 300.0
 offset_bottom = 20.0
 theme = ExtResource("6_ryrav")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Control/PanelContainer" unique_id=1682291505]
 layout_mode = 2
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="players" type="VBoxContainer" parent="CanvasLayer/Control/PanelContainer/MarginContainer"]
+[node name="players" type="VBoxContainer" parent="CanvasLayer/Control/PanelContainer/MarginContainer" unique_id=1929852731]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="start" type="Label" parent="CanvasLayer/Control"]
+[node name="start" type="Label" parent="CanvasLayer/Control" unique_id=1055152538]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -835,14 +835,11 @@ theme_override_font_sizes/font_size = 75
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control" unique_id=446975965]
 root_node = NodePath("../TextureRect")
-libraries = {
-&"": SubResource("AnimationLibrary_iotsf")
-}
-autoplay = "transOut"
+libraries/ = SubResource("AnimationLibrary_iotsf")
 
-[node name="pauseMenu" type="Control" parent="CanvasLayer/Control"]
+[node name="pauseMenu" type="Control" parent="CanvasLayer/Control" unique_id=230930389]
 visible = false
 top_level = true
 layout_mode = 1
@@ -852,7 +849,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control/pauseMenu"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Control/pauseMenu" unique_id=28549294]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -866,7 +863,7 @@ offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="lobby button" type="Button" parent="CanvasLayer/Control/pauseMenu/Panel"]
+[node name="lobby button" type="Button" parent="CanvasLayer/Control/pauseMenu/Panel" unique_id=2119009981]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -882,7 +879,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "lobby"
 
-[node name="settings button" type="Button" parent="CanvasLayer/Control/pauseMenu/Panel"]
+[node name="settings button" type="Button" parent="CanvasLayer/Control/pauseMenu/Panel" unique_id=1125591830]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -898,7 +895,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 32
 text = "settings"
 
-[node name="close button" type="TextureButton" parent="CanvasLayer/Control/pauseMenu/Panel"]
+[node name="close button" type="TextureButton" parent="CanvasLayer/Control/pauseMenu/Panel" unique_id=184089079]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -912,7 +909,7 @@ texture_normal = ExtResource("11_iotsf")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=287173386]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -928,7 +925,7 @@ grow_vertical = 0
 theme = ExtResource("6_ryrav")
 text = "(ENTER) Toggle ready      (ESC) Toggle paused      (R) Respawn"
 
-[node name="loading" type="Control" parent="CanvasLayer/Control"]
+[node name="loading" type="Control" parent="CanvasLayer/Control" unique_id=724442730]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -943,7 +940,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="progress" type="ProgressBar" parent="CanvasLayer/Control/loading"]
+[node name="progress" type="ProgressBar" parent="CanvasLayer/Control/loading" unique_id=1309969546]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -958,7 +955,7 @@ offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="name" type="Label" parent="CanvasLayer/Control/loading"]
+[node name="name" type="Label" parent="CanvasLayer/Control/loading" unique_id=1874063944]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -974,21 +971,21 @@ grow_vertical = 2
 text = "normals"
 horizontal_alignment = 1
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="CanvasLayer/Control"]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="CanvasLayer/Control" unique_id=699519091]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(608, 496)
 rotation = 3.1415927
 scale = Vector2(1993.2571, -1082.1482)
 mesh = SubResource("BoxMesh_215e1")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1211818840]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.00006
 texture = ExtResource("12_80cx4")
 expand_mode = 1
 
-[node name="optionsMenu" parent="CanvasLayer/Control" instance=ExtResource("12_lc2xo")]
+[node name="optionsMenu" parent="CanvasLayer/Control" unique_id=817196533 instance=ExtResource("12_lc2xo")]
 visible = false
 layout_mode = 0
 anchors_preset = 0
@@ -997,7 +994,7 @@ anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control"]
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Control" unique_id=1740621090]
 z_index = 3
 layout_mode = 0
 offset_left = 1160.0
@@ -1006,7 +1003,7 @@ offset_bottom = 648.0
 texture = ExtResource("13_215e1")
 expand_mode = 1
 
-[node name="globalAlert" type="Label" parent="CanvasLayer/Control"]
+[node name="globalAlert" type="Label" parent="CanvasLayer/Control" unique_id=1382290373]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -1029,7 +1026,7 @@ theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 141
 text = "Global Modifier"
 
-[node name="Smoke" type="AudioStreamPlayer2D" parent="."]
+[node name="Smoke" type="AudioStreamPlayer2D" parent="." unique_id=1997338484]
 position = Vector2(-432, 456)
 stream = ExtResource("15_80cx4")
 pitch_scale = 0.6
@@ -1037,7 +1034,7 @@ panning_strength = 0.0
 bus = &"clicks"
 playback_type = 1
 
-[node name="Veryloudairhorn" type="AudioStreamPlayer2D" parent="."]
+[node name="Veryloudairhorn" type="AudioStreamPlayer2D" parent="." unique_id=1236328546]
 position = Vector2(-184, 248)
 stream = ExtResource("16_e8heu")
 volume_db = -3.775
@@ -1050,8 +1047,8 @@ playback_type = 1
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_on_lobby_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_clicksound"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_clicksound"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_clicksound"]
