@@ -37,6 +37,7 @@ func _ready() -> void:
 	loadData()
 
 func _process(_delta: float) -> void:
+	AudioServer.set_bus_volume_db(0, -1 / (Global.userSettings.volume / 100))
 	var state = 0
 	if not running:
 		if isReady:

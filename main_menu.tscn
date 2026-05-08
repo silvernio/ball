@@ -151,10 +151,6 @@ tracks/12/keys = {
 "times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id="Animation_glbon"]
-resource_name = "returnPressed"
-step = 0.1
-
 [sub_resource type="Animation" id="Animation_7vrkn"]
 resource_name = "sceneTransition"
 length = 0.5
@@ -305,14 +301,13 @@ tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(2, 0),
-"points": PackedFloat32Array(-38, 0, 0, 0.20276138, 29, -778, -0.10000001, 146, 0, -80),
-"times": PackedFloat32Array(0, 0.4)
+"points": PackedFloat32Array(-38.5, 0, 0, 0.20276138, 29, -771.5, -0.19999999, 77, 0, -80),
+"times": PackedFloat32Array(0.1, 0.4)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jix8l"]
 _data = {
 &"RESET": SubResource("Animation_fu7sn"),
-&"returnPressed": SubResource("Animation_glbon"),
 &"sceneTransition": SubResource("Animation_7vrkn"),
 &"settingsPressed": SubResource("Animation_jix8l")
 }
@@ -370,7 +365,7 @@ anchor_right = 0.5
 offset_left = -72.0
 offset_top = 820.337
 offset_right = 72.0
-offset_bottom = 891.33704
+offset_bottom = 891.33716
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -393,7 +388,7 @@ anchor_bottom = 0.5
 offset_left = -232.0
 offset_top = 618.0
 offset_right = 238.0
-offset_bottom = 679.00006
+offset_bottom = 679.00024
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
@@ -412,7 +407,7 @@ anchor_bottom = 0.5
 offset_left = -232.0
 offset_top = 701.0
 offset_right = 238.0
-offset_bottom = 762.00024
+offset_bottom = 762.001
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
@@ -441,7 +436,7 @@ anchor_bottom = 0.5
 offset_left = 255.0
 offset_top = 626.5
 offset_right = 339.0
-offset_bottom = 657.5003
+offset_bottom = 657.5004
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
@@ -459,8 +454,8 @@ scale = Vector2(1324.5, 768.74994)
 mesh = SubResource("BoxMesh_glbon")
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
-[connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="play" to="." method="_on_mouse_hover"]
 [connection signal="text_changed" from="lobby" to="." method="_on_lobby_text_changed"]
 [connection signal="text_changed" from="username" to="." method="_on_username_text_changed"]
@@ -468,5 +463,5 @@ mesh = SubResource("BoxMesh_glbon")
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="settings" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="race" to="." method="_on_mouse_hover"]
-[connection signal="toggled" from="race" to="." method="_clicksound"]
 [connection signal="toggled" from="race" to="." method="_on_race_toggled"]
+[connection signal="toggled" from="race" to="." method="_clicksound"]

@@ -40,11 +40,11 @@ func _on_vol_box_music_value_changed(value: float) -> void:
 	
 func _on_sfx_slider_value_changed(value: float) -> void:
 	$sfxBox.value = $sfxSlider.value
-	Global.userSettings.musicVol = $sfxBox.value
+	Global.userSettings.sfxVol = $sfxBox.value
 	Global.saveData()
 func _on_sfx_box_value_changed(value: float) -> void:
 	$sfxSlider.value = $sfxBox.value
-	Global.userSettings.musicVol = $sfxBox.value
+	Global.userSettings.sfxVol = $sfxBox.value
 	Global.saveData()
 
 
