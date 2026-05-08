@@ -1,20 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnng6pgsn8h8e"]
+[gd_scene format=3 uid="uid://dnng6pgsn8h8e"]
 
 [ext_resource type="AudioStream" uid="uid://cieoshetx1bh4" path="res://click.mp3" id="1_a0u1m"]
-[ext_resource type="Script" path="res://sfx.gd" id="1_ycbqo"]
+[ext_resource type="Script" uid="uid://b8ffpgrmb60yo" path="res://sfx.gd" id="1_ycbqo"]
 [ext_resource type="AudioStream" uid="uid://b5ktbqmadn1wd" path="res://browse.mp3" id="2_ycbqo"]
 
-[node name="sfx" type="Node"]
+[node name="sfx" type="Node" unique_id=892496859]
 script = ExtResource("1_ycbqo")
 
-[node name="clickSFX" type="AudioStreamPlayer" parent="."]
+[node name="clickSFX" type="AudioStreamPlayer" parent="." unique_id=489627925]
 stream = ExtResource("1_a0u1m")
-volume_db = -80.0
 bus = &"clicks"
 playback_type = 1
 
-[node name="browseSFX" type="AudioStreamPlayer" parent="."]
+[node name="browseSFX" type="AudioStreamPlayer" parent="." unique_id=1751209228]
 stream = ExtResource("2_ycbqo")
-volume_db = -80.0
 bus = &"clicks"
 playback_type = 1

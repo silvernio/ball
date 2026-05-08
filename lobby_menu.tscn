@@ -602,12 +602,14 @@ root_node = NodePath("../MeshInstance2D2")
 libraries/ = SubResource("AnimationLibrary_iu37i")
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=641749829]
+visible = false
 modulate = Color(0, 0, 0, 1)
 position = Vector2(594.4433, 1347.1521)
 scale = Vector2(-1993.2571, 1082.1482)
 mesh = SubResource("BoxMesh_nv5w8")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1347478728]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
