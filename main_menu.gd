@@ -5,6 +5,7 @@ extends Control
 @export var race: CheckBox
 
 func _ready() -> void:
+	connect("settingsClosed", _settingsClosed)
 	BackgroundMusic.bus = "menu"
 	lobby.text = str(Global.seed)
 	username.text = Global.username
@@ -34,6 +35,8 @@ func _on_settings_pressed() -> void:
 	await get_tree().create_timer(0.6).timeout
 	$optionsMenu/AnimationPlayer.play("optionsPressed")
 
+func _settingsClosed() -> void:
+	$AnimationPlayer.play_backwards("settingsPressed")
 
 func _on_mouse_hover() -> void:
 	Sfx.get_node("browseSFX").play()

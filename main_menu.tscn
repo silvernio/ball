@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cskbojmb7f2h7"]
+[gd_scene format=3 uid="uid://cskbojmb7f2h7"]
 
 [ext_resource type="Script" uid="uid://dx32ny7ktawxe" path="res://main_menu.gd" id="1_7vrkn"]
 [ext_resource type="Theme" uid="uid://6thw543k5i1t" path="res://gui.tres" id="3_fu7sn"]
@@ -135,8 +135,8 @@ tracks/11/path = NodePath("title:position:x")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(458, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(93, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/12/type = "bezier"
@@ -146,8 +146,8 @@ tracks/12/path = NodePath("title:position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-247.85, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(-778, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -293,9 +293,9 @@ tracks/10/path = NodePath("title:position:x")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(458, -0.25, 0, 0.25, 0, 458, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0.2, 0.5)
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(93, 0, 0, 0, 0, 93, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3)
 }
 tracks/11/type = "bezier"
 tracks/11/imported = false
@@ -304,9 +304,9 @@ tracks/11/path = NodePath("title:position:y")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(113, -0.25, 0, 0.25, 0, -247.85, -0.050000004, 60.141666, 0, 0),
-"times": PackedFloat32Array(0.2, 0.5)
+"handle_modes": PackedInt32Array(2, 0),
+"points": PackedFloat32Array(-38, 0, 0, 0.20276138, 29, -778, -0.10000001, 146, 0, -80),
+"times": PackedFloat32Array(0, 0.4)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jix8l"]
@@ -319,7 +319,7 @@ _data = {
 
 [sub_resource type="BoxMesh" id="BoxMesh_glbon"]
 
-[node name="main menu" type="Control" node_paths=PackedStringArray("lobby", "username", "race")]
+[node name="main menu" type="Control" unique_id=781025603 node_paths=PackedStringArray("lobby", "username", "race")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -332,25 +332,26 @@ lobby = NodePath("lobby")
 username = NodePath("username")
 race = NodePath("race")
 
-[node name="optionsMenu" parent="." instance=ExtResource("3_jix8l")]
+[node name="optionsMenu" parent="." unique_id=1047845583 instance=ExtResource("3_jix8l")]
 layout_mode = 1
 
-[node name="title" type="RichTextLabel" parent="."]
+[node name="title" type="RichTextLabel" parent="." unique_id=1590303167]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -118.0
-offset_top = -247.85
-offset_right = 136.0
-offset_bottom = -103.850006
+offset_left = -483.0
+offset_top = -778.0
+offset_right = 481.00317
+offset_bottom = -340.99994
 grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_constants/shadow_outline_size = 6
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_offset_y = 6
 theme_override_constants/outline_size = 12
-theme_override_font_sizes/normal_font_size = 105
+theme_override_font_sizes/normal_font_size = 427
 theme_override_font_sizes/bold_font_size = 105
 theme_override_font_sizes/bold_italics_font_size = 105
 theme_override_font_sizes/italics_font_size = 105
@@ -360,7 +361,7 @@ text = "[wave amp=50][rainbow]BALL"
 fit_content = true
 scroll_active = false
 
-[node name="play" type="Button" parent="."]
+[node name="play" type="Button" parent="." unique_id=469381946]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -368,7 +369,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -72.0
 offset_top = 820.337
-offset_right = 72.00012
+offset_right = 72.0
 offset_bottom = 891.33704
 grow_horizontal = 2
 size_flags_horizontal = 4
@@ -382,7 +383,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="lobby" type="LineEdit" parent="."]
+[node name="lobby" type="LineEdit" parent="." unique_id=1098285061]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -401,7 +402,7 @@ placeholder_text = "lobby"
 alignment = 1
 max_length = 15
 
-[node name="username" type="LineEdit" parent="."]
+[node name="username" type="LineEdit" parent="." unique_id=314265450]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -411,7 +412,7 @@ anchor_bottom = 0.5
 offset_left = -232.0
 offset_top = 701.0
 offset_right = 238.0
-offset_bottom = 762.0
+offset_bottom = 762.00024
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
@@ -420,17 +421,17 @@ placeholder_text = "username"
 alignment = 1
 max_length = 15
 
-[node name="settings" type="Button" parent="."]
+[node name="settings" type="Button" parent="." unique_id=205067677]
 layout_mode = 0
 offset_left = 452.0
 offset_top = 1102.0
 offset_right = 703.0
-offset_bottom = 1160.0
+offset_bottom = 1160.0001
 theme = ExtResource("3_fu7sn")
 theme_override_font_sizes/font_size = 32
 text = "Settings"
 
-[node name="race" type="CheckBox" parent="."]
+[node name="race" type="CheckBox" parent="." unique_id=1338196985]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -440,7 +441,7 @@ anchor_bottom = 0.5
 offset_left = 255.0
 offset_top = 626.5
 offset_right = 339.0
-offset_bottom = 657.5001
+offset_bottom = 657.5003
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
@@ -448,17 +449,16 @@ theme = ExtResource("3_fu7sn")
 button_pressed = true
 text = "Race"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_jix8l")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=530484768]
+libraries/ = SubResource("AnimationLibrary_jix8l")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1408669242]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(1868, 331)
 scale = Vector2(1324.5, 768.74994)
 mesh = SubResource("BoxMesh_glbon")
 
+[connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_mouse_hover"]

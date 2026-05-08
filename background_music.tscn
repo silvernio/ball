@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcatevliq7jdf"]
+[gd_scene format=3 uid="uid://bcatevliq7jdf"]
 
 [ext_resource type="AudioStream" uid="uid://cq4pshs5s5uew" path="res://BREAKCORE.mp3" id="1_4m5bw"]
 [ext_resource type="Script" uid="uid://ctvyuehi1mcb8" path="res://background_music.gd" id="2_l3d1b"]
 
-[node name="backgroundMusic" type="AudioStreamPlayer"]
+[node name="backgroundMusic" type="AudioStreamPlayer" unique_id=1035763715]
 stream = ExtResource("1_4m5bw")
-volume_db = -80.0
 pitch_scale = 1.1
 autoplay = true
+bus = &"menu"
 playback_type = 1
 script = ExtResource("2_l3d1b")

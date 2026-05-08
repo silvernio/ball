@@ -8,7 +8,7 @@ func _ready() -> void:
 	Network.newRace.connect(_global_modifier)
 	Network.spawn.connect(_on_spawn)
 	BackgroundMusic.bus = "inGame"
-	#connect("settingsClosed", _settingsClosed)
+	connect("settingsClosed", _settingsClosed)
 	Global.running = not Global.race
 	Global.isReady = false
 
@@ -64,7 +64,7 @@ func _on_settings_button_pressed() -> void:
 	Sfx.get_node("clickSFX").play()
 	$CanvasLayer/Control/pauseMenu.visible = !$CanvasLayer/Control/pauseMenu.visible
 	$CanvasLayer/Control/optionsMenu.visible = true
-	$CanvasLayer/Control/optionsMenu/AnimationPlayer.play("inGameOptions")
+	$CanvasLayer/Control/optionsMenu/AnimationPlayer.play("optionsPressed")
 
 func _on_lobby_button_pressed() -> void:
 	Global.leavingScene = 'game'

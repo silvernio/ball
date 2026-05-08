@@ -20,6 +20,7 @@ var lastState = -1
 var userSettings = {
 	'volume': 100,
 	'musicVol': 100,
+	'sfxVol': 100,
 	'FOV': 90
 }
 

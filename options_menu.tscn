@@ -230,29 +230,29 @@ tracks/19/keys = {
 tracks/20/type = "bezier"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("fov:position:x")
+tracks/20/path = NodePath("sfx:position:x")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(475, -0.2125, 0, 0.2125, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(459.245, -0.2125, 0, 0.2125, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/21/type = "bezier"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("fov:position:y")
+tracks/21/path = NodePath("sfx:position:y")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(-682, -0.2125, 0, 0.2125, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/22/type = "bezier"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("fovBox:position:x")
+tracks/22/path = NodePath("sfxBox:position:x")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -263,7 +263,7 @@ tracks/22/keys = {
 tracks/23/type = "bezier"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("fovBox:position:y")
+tracks/23/path = NodePath("sfxBox:position:y")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -274,7 +274,7 @@ tracks/23/keys = {
 tracks/24/type = "bezier"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("fovSlider:position:x")
+tracks/24/path = NodePath("sfxSlider:position:x")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -285,7 +285,7 @@ tracks/24/keys = {
 tracks/25/type = "bezier"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("fovSlider:position:y")
+tracks/25/path = NodePath("sfxSlider:position:y")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -521,18 +521,18 @@ tracks/19/keys = {
 tracks/20/type = "bezier"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("fov:position:x")
+tracks/20/path = NodePath("sfx:position:x")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
 "handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(475, -0.2125, 0, 0.2125, 0, 475, -0.054166667, 0, 0, 0),
+"points": PackedFloat32Array(459.245, -0.2125, 0, 0.2125, 0, 459.245, -0.054166667, 0, 0, 0),
 "times": PackedFloat32Array(0.15, 0.45)
 }
 tracks/21/type = "bezier"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("fov:position:y")
+tracks/21/path = NodePath("sfx:position:y")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -543,7 +543,7 @@ tracks/21/keys = {
 tracks/22/type = "bezier"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("fovBox:position:x")
+tracks/22/path = NodePath("sfxBox:position:x")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -554,7 +554,7 @@ tracks/22/keys = {
 tracks/23/type = "bezier"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("fovBox:position:y")
+tracks/23/path = NodePath("sfxBox:position:y")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -565,7 +565,7 @@ tracks/23/keys = {
 tracks/24/type = "bezier"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("fovSlider:position:x")
+tracks/24/path = NodePath("sfxSlider:position:x")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -576,7 +576,7 @@ tracks/24/keys = {
 tracks/25/type = "bezier"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("fovSlider:position:y")
+tracks/25/path = NodePath("sfxSlider:position:y")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -812,18 +812,18 @@ tracks/19/keys = {
 tracks/20/type = "bezier"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("fov:position:x")
+tracks/20/path = NodePath("sfx:position:x")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(475, -0.25, 0, 0.25, 0, 475, -0.054166667, 0, 0, 0),
+"points": PackedFloat32Array(459.245, -0.25, 0, 0.25, 0, 459.245, -0.054166667, 0, 0, 0),
 "times": PackedFloat32Array(0.15, 0.45)
 }
 tracks/21/type = "bezier"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("fov:position:y")
+tracks/21/path = NodePath("sfx:position:y")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
@@ -834,7 +834,7 @@ tracks/21/keys = {
 tracks/22/type = "bezier"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("fovBox:position:x")
+tracks/22/path = NodePath("sfxBox:position:x")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
@@ -845,7 +845,7 @@ tracks/22/keys = {
 tracks/23/type = "bezier"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("fovBox:position:y")
+tracks/23/path = NodePath("sfxBox:position:y")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -856,7 +856,7 @@ tracks/23/keys = {
 tracks/24/type = "bezier"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("fovSlider:position:x")
+tracks/24/path = NodePath("sfxSlider:position:x")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -867,7 +867,7 @@ tracks/24/keys = {
 tracks/25/type = "bezier"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("fovSlider:position:y")
+tracks/25/path = NodePath("sfxSlider:position:y")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -997,24 +997,24 @@ offset_bottom = -689.9999
 grow_horizontal = 2
 value = 100.0
 
-[node name="fov" type="Label" parent="." unique_id=1699855838]
+[node name="sfx" type="Label" parent="." unique_id=1699855838]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -101.0
+offset_left = -116.755005
 offset_top = -682.0
-offset_right = 12.0
+offset_right = 12.244995
 offset_bottom = -650.0
 grow_horizontal = 2
 theme = ExtResource("1_lbr8e")
 theme_override_font_sizes/font_size = 19
-text = "FOV"
+text = "Sounds Volume"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="fovBox" type="SpinBox" parent="." unique_id=538419728]
+[node name="sfxBox" type="SpinBox" parent="." unique_id=538419728]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -1028,7 +1028,7 @@ grow_horizontal = 2
 theme = ExtResource("1_lbr8e")
 value = 100.0
 
-[node name="fovSlider" type="HSlider" parent="." unique_id=1936278140]
+[node name="sfxSlider" type="HSlider" parent="." unique_id=1936278140]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -1056,8 +1056,8 @@ text = "return
 "
 
 [connection signal="mouse_entered" from="back" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="back" to="." method="_clicksound"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="back" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="volBox" to="." method="_on_mouse_hover"]
 [connection signal="mouse_entered" from="volSlider" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="volSlider" to="." method="_on_vol_slider_value_changed"]
@@ -1065,6 +1065,9 @@ text = "return
 [connection signal="value_changed" from="volBoxMusic" to="." method="_on_vol_box_music_value_changed"]
 [connection signal="mouse_entered" from="volSliderMusic" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="volSliderMusic" to="." method="_on_vol_slider_music_value_changed"]
+[connection signal="value_changed" from="sfxBox" to="." method="_on_sfx_box_value_changed"]
+[connection signal="mouse_entered" from="sfxSlider" to="." method="_on_mouse_hover"]
+[connection signal="value_changed" from="sfxSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="mouse_entered" from="inGameBack" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="inGameBack" to="." method="_clicksound"]
 [connection signal="pressed" from="inGameBack" to="." method="_on_in_game_back_pressed"]
+[connection signal="pressed" from="inGameBack" to="." method="_clicksound"]
