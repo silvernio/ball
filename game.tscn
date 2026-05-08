@@ -972,6 +972,7 @@ text = "normals"
 horizontal_alignment = 1
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="CanvasLayer/Control" unique_id=699519091]
+visible = false
 modulate = Color(0, 0, 0, 1)
 position = Vector2(608, 496)
 rotation = 3.1415927
@@ -979,6 +980,7 @@ scale = Vector2(1993.2571, -1082.1482)
 mesh = SubResource("BoxMesh_215e1")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1211818840]
+visible = false
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.00006
