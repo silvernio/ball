@@ -21,7 +21,7 @@ var userSettings = {
 	'volume': 100,
 	'musicVol': 100,
 	'sfxVol': 100,
-	'FOV': 90
+	'fov': 75
 }
 
 var modifierModifications = {

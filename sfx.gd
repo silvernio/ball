@@ -10,6 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#$clickSFX.volume_db = -1 / (Global.userSettings.volume / 100)
 	#$browseSFX.volume_db = -1 / (Global.userSettings.volume / 100)
-	print($browseSFX.volume_db)
+	#print($browseSFX.volume_db)
 	AudioServer.set_bus_volume_db(4, -5/(Global.userSettings.sfxVol / 100))
 	#sfxVol. = 0 / (Global.userSettings.sfxVol / 100)

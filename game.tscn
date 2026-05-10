@@ -661,6 +661,7 @@ player = NodePath("../player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.5)
 rotation_edit_mode = 1
 current = true
+fov = 40.0
 script = ExtResource("5_7jktm")
 player = NodePath("../player")
 players = NodePath("../players")

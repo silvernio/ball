@@ -8,13 +8,17 @@ func _ready() -> void:
 	$volSlider.value = Global.userSettings.volume
 	$volBoxMusic.value = Global.userSettings.musicVol
 	$volSliderMusic.value = Global.userSettings.musicVol
+	$sfxBox.value = Global.userSettings.sfxVol
+	$sfxSlider.value = Global.userSettings.sfxVol
+	$fovBox.value = Global.userSettings.fov
+	$fovSlider.value = Global.userSettings.fov
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_back_pressed() -> void:
-	print(Global.leavingScene)
+	#print(Global.leavingScene)
 	$AnimationPlayer.play_backwards("optionsPressed")
 	await get_tree().create_timer(0.425).timeout
 	emit_signal("settingsClosed")
@@ -23,7 +27,6 @@ func _on_vol_slider_value_changed(value: float) -> void:
 	$volBox.value = $volSlider.value
 	Global.userSettings.volume = $volBox.value
 	Global.saveData()
-	
 func _on_vol_box_value_changed(value: float) -> void:
 	$volSlider.value = $volBox.value
 	Global.userSettings.volume = $volBox.value
@@ -32,12 +35,10 @@ func _on_vol_slider_music_value_changed(value: float) -> void:
 	$volBoxMusic.value = $volSliderMusic.value
 	Global.userSettings.musicVol = $volBoxMusic.value
 	Global.saveData()
-	
 func _on_vol_box_music_value_changed(value: float) -> void:
 	$volSliderMusic.value = $volBoxMusic.value
 	Global.userSettings.musicVol = $volBoxMusic.value
 	Global.saveData()
-	
 func _on_sfx_slider_value_changed(value: float) -> void:
 	$sfxBox.value = $sfxSlider.value
 	Global.userSettings.sfxVol = $sfxBox.value
@@ -46,7 +47,15 @@ func _on_sfx_box_value_changed(value: float) -> void:
 	$sfxSlider.value = $sfxBox.value
 	Global.userSettings.sfxVol = $sfxBox.value
 	Global.saveData()
-
+func _on_fov_slider_value_changed(value: float) -> void:
+	print(Global.userSettings.fov)
+	$fovBox.value = $fovSlider.value
+	Global.userSettings.fov = $fovBox.value
+	Global.saveData()
+func _on_fov_box_value_changed(value: float) -> void:
+	$fovSlider.value = $fovBox.value
+	Global.userSettings.fov = $fovBox.value
+	Global.saveData()
 
 #func _on_in_game_back_pressed() -> void:
 	#BackgroundMusic.bus = "inGame"

@@ -1384,7 +1384,8 @@ offset_right = 103.00018
 offset_bottom = -595.0
 grow_horizontal = 2
 theme = ExtResource("1_lbr8e")
-value = 100.0
+min_value = 40.0
+value = 75.0
 
 [node name="fovSlider" type="HSlider" parent="." unique_id=1533562460]
 texture_filter = 1
@@ -1394,10 +1395,11 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -172.0
 offset_top = -596.0
-offset_right = 171.99957
+offset_right = 171.99963
 offset_bottom = -579.9999
 grow_horizontal = 2
-value = 100.0
+min_value = 40.0
+value = 75.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=78465752]
 libraries/ = SubResource("AnimationLibrary_ogda5")
@@ -1423,9 +1425,14 @@ text = "return
 [connection signal="value_changed" from="volBoxMusic" to="." method="_on_vol_box_music_value_changed"]
 [connection signal="mouse_entered" from="volSliderMusic" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="volSliderMusic" to="." method="_on_vol_slider_music_value_changed"]
+[connection signal="mouse_entered" from="sfxBox" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="sfxBox" to="." method="_on_sfx_box_value_changed"]
 [connection signal="mouse_entered" from="sfxSlider" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="sfxSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="mouse_entered" from="fovBox" to="." method="_on_mouse_hover"]
+[connection signal="value_changed" from="fovBox" to="." method="_on_fov_box_value_changed"]
+[connection signal="mouse_entered" from="fovSlider" to="." method="_on_mouse_hover"]
+[connection signal="value_changed" from="fovSlider" to="." method="_on_fov_slider_value_changed"]
 [connection signal="mouse_entered" from="inGameBack" to="." method="_on_mouse_hover"]
 [connection signal="pressed" from="inGameBack" to="." method="_clicksound"]
 [connection signal="pressed" from="inGameBack" to="." method="_on_in_game_back_pressed"]

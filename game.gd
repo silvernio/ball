@@ -5,6 +5,7 @@ extends Node3D
 @export var start: Label
 
 func _ready() -> void:
+
 	Network.newRace.connect(_global_modifier)
 	Network.spawn.connect(_on_spawn)
 	BackgroundMusic.bus = "inGame"

@@ -29,6 +29,7 @@ func lerp5(start, end, step):
 	return lerpn(start, end, 0.5, step)
 
 func _ready() -> void:
+	
 	originalOffset = position
 	followPos = position
 	offset = position
@@ -41,6 +42,7 @@ func getTargetPos():
 	return pos
 	
 func _physics_process(delta: float) -> void:
+	fov = Global.userSettings.fov
 	var move = Vector2(Input.get_axis('camera_left', 'camera_right'), Input.get_axis('camera_down', 'camera_up')).normalized()
 	
 	turn += move.x * delta
