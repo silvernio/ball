@@ -66,6 +66,7 @@ signal on_names
 signal on_seed
 signal cancel_start
 signal newRace
+signal upgradeTime
 
 signal on_create_offer
 signal on_session
@@ -220,6 +221,7 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 	elif event == 'upgradeSelect':
 		if Global.scene != 'upgrade':
 			Global.scene = 'upgrade'
+			upgradeTime.emit()
 			get_tree().change_scene_to_file("res://upgrade_select.tscn")
 	elif event == 'left':
 		lobby = null
@@ -285,8 +287,8 @@ func _on_socket_io_socket_disconnected() -> void:
 
 func _player_finished():
 	print('first')
-	if Network.client.finished.length == Network.client.players.length:
+	if client.finished.length == client.players.length:
 		print('second')
-		print(Network.client.finished.length)
-		print(Network.client.players.length)
-		Network.client.emit('upgrades')
+		print(client.finished.length)
+		print(client.players.length)
+		client.emit('upgrades')
