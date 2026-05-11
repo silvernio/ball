@@ -112,6 +112,7 @@ func _on_speed_box_value_changed(value: float) -> void:
 	Network.options.speed = $player/speed/speedBox.value
 
 func _on_exit_button_pressed() -> void:
+	$AnimationPlayer.play_backwards("sceneOut")
 	Global.leavingScene = 'lobby'
 	Network.emit ('leave')
 

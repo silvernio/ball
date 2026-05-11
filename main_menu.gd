@@ -5,7 +5,8 @@ extends Control
 @export var race: CheckBox
 
 func _ready() -> void:
-	
+	if Global.leavingScene == 'lobby':
+		$AnimationPlayer.play_backwards("sceneTransition")
 	connect("settingsClosed", _settingsClosed)
 	BackgroundMusic.bus = "menu"
 	lobby.text = str(Global.seed)
