@@ -5,3 +5,4 @@ func _on_body_entered(body: Node3D) -> void:
 		Global.running = false
 		if Global.race:
 			Network.client.emit('finish', Global.time)
+			Network._player_finished()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xf7dekaj2vlt"]
+[gd_scene format=3 uid="uid://xf7dekaj2vlt"]
 
 [ext_resource type="Script" uid="uid://dksggyfqmwiyv" path="res://player.gd" id="1_4flbx"]
 [ext_resource type="FontFile" uid="uid://du6t0nvtj3kim" path="res://Fortyfive.ttf" id="2_i3pqv"]
@@ -21,7 +21,7 @@ uv2_padding = 4.84
 radius = 1.0
 height = 2.0
 
-[node name="player" type="CharacterBody3D" node_paths=PackedStringArray("username", "mesh", "core", "scaleNode")]
+[node name="player" type="CharacterBody3D" unique_id=1373179491 node_paths=PackedStringArray("username", "mesh", "core", "scaleNode")]
 physics_interpolation_mode = 1
 transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 0, 0, 0)
 script = ExtResource("1_4flbx")
@@ -30,14 +30,14 @@ mesh = NodePath("core/scale/MeshInstance3D")
 core = NodePath("core")
 scaleNode = NodePath("core/scale")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1965928584]
 shape = SubResource("SphereShape3D_4flbx")
 
-[node name="core" type="Node3D" parent="."]
+[node name="core" type="Node3D" parent="." unique_id=425028994]
 transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 0, 0, 0)
 top_level = true
 
-[node name="Label3D" type="Label3D" parent="core"]
+[node name="Label3D" type="Label3D" parent="core" unique_id=745671687]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3718, 0)
 billboard = 1
 no_depth_test = true
@@ -45,9 +45,9 @@ fixed_size = true
 font = ExtResource("2_i3pqv")
 font_size = 64
 
-[node name="scale" type="Node3D" parent="core"]
+[node name="scale" type="Node3D" parent="core" unique_id=1940920513]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="core/scale"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="core/scale" unique_id=2138383703]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 0.99999994, 0, -0.99999994, 0, -4.3711385e-08, 0, 0, 0)
 mesh = SubResource("SphereMesh_onrkg")
 skeleton = NodePath("../../..")

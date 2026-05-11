@@ -218,7 +218,9 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		lastOptions = options.duplicate()
 		options_changed.emit()
 	elif event == 'upgradeSelect':
-		get_tree().change_scene_to_file("res://upgrade_select.tscn")
+		if Global.scene != 'upgrade':
+			Global.scene = 'upgrade'
+			get_tree().change_scene_to_file("res://upgrade_select.tscn")
 	elif event == 'left':
 		lobby = null
 		names = {}
@@ -280,3 +282,7 @@ func _on_reconnect_timeout() -> void:
 func _on_socket_io_socket_disconnected() -> void:
 	_on_reconnect_timeout()
 	#$reconnect.start()
+
+func _player_finished():
+	if Network.client.finished.length == Network.client.players.length:
+		Network.client.emit('upgrades')
