@@ -408,7 +408,7 @@ anchor_bottom = 0.5
 offset_left = -232.0
 offset_top = 701.0
 offset_right = 238.0
-offset_bottom = 762.001
+offset_bottom = 762.00073
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
@@ -437,7 +437,7 @@ anchor_bottom = 0.5
 offset_left = 255.0
 offset_top = 626.5
 offset_right = 339.0
-offset_bottom = 657.5004
+offset_bottom = 657.5005
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
@@ -458,6 +458,7 @@ mesh = SubResource("BoxMesh_glbon")
 stream = ExtResource("4_jix8l")
 volume_db = 4.905
 bus = &"BALL"
+playback_type = 1
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
