@@ -287,8 +287,8 @@ func _on_socket_io_socket_disconnected() -> void:
 
 func _player_finished():
 	print('first')
-	if client.finished.length == client.players.length:
+	if client.lobby.finished.length == client.lobby.players.length:
 		print('second')
-		print(client.finished.length)
-		print(client.players.length)
+		print(client.lobby.finished.length)
+		print(client.lobby.players.length)
 		client.emit('upgrades')
