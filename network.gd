@@ -286,9 +286,10 @@ func _on_socket_io_socket_disconnected() -> void:
 	#$reconnect.start()
 
 func _player_finished():
-	print('first')
-	if client.lobby.finished.length == client.lobby.players.length:
-		print('second')
-		print(client.lobby.finished.length)
-		print(client.lobby.players.length)
-		client.emit('upgrades')
+	if Global.running:
+		print('first')
+		if client.lobby.finished.length == client.lobby.players.length:
+			print('second')
+			print(client.lobby.finished.length)
+			print(client.lobby.players.length)
+			client.emit('upgrades')

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu4hxnto5mnhq"]
+[gd_scene format=3 uid="uid://cu4hxnto5mnhq"]
 
 [ext_resource type="Script" uid="uid://b4bpmrj4dbrbk" path="res://upgrade_select.gd" id="1_0cbif"]
 [ext_resource type="Texture2D" uid="uid://cgp2car2jn4ky" path="res://upgrade cards/speed_boost_card.png" id="2_3ru1o"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b8st1k3f1cm7j" path="res://upgrade cards/rhino_mode_card.png" id="4_1cx38"]
 [ext_resource type="Texture2D" uid="uid://bwfpr0geobxal" path="res://upgrade cards/grab_card.png" id="5_o2jsb"]
 
-[node name="upgradeSelect" type="Control"]
+[node name="upgradeSelect" type="Control" unique_id=1126848186]
 layout_mode = 3
 anchor_left = -1.815
 anchor_top = -1.8030001
@@ -20,21 +20,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0cbif")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=410552139]
 layout_mode = 0
-offset_left = -2087.0
-offset_top = -1172.0
-offset_right = 2100.0
+offset_left = -2095.0
+offset_top = -1179.0
+offset_right = 2095.0
 offset_bottom = -922.0
-pivot_offset = Vector2(1005.805, 153.48)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("2_h8mob")
 theme_override_font_sizes/normal_font_size = 236
 bbcode_enabled = true
 text = "[wave freq=10]'s selection"
 scroll_active = false
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="upgrade1" type="Button" parent="."]
+[node name="upgrade1" type="Button" parent="." unique_id=1639969930]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.619
@@ -49,7 +50,7 @@ theme = ExtResource("2_h8mob")
 icon = ExtResource("2_3ru1o")
 icon_alignment = 1
 
-[node name="upgrade2" type="Button" parent="."]
+[node name="upgrade2" type="Button" parent="." unique_id=1542682572]
 layout_mode = 1
 offset_left = -564.0
 offset_top = -784.175
@@ -59,7 +60,7 @@ theme = ExtResource("2_h8mob")
 icon = ExtResource("4_1cx38")
 icon_alignment = 1
 
-[node name="upgrade3" type="Button" parent="."]
+[node name="upgrade3" type="Button" parent="." unique_id=1984793943]
 layout_mode = 0
 offset_left = 728.0
 offset_top = -784.175
@@ -69,7 +70,7 @@ theme = ExtResource("2_h8mob")
 icon = ExtResource("5_o2jsb")
 icon_alignment = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1096326533]
 zoom = Vector2(-0.275, -0.275)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350405399]
