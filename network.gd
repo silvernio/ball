@@ -218,11 +218,11 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		options = msg[0]
 		lastOptions = options.duplicate()
 		options_changed.emit()
-	elif event == 'upgradeSelect':
-		if Global.scene != 'upgrade':
-			Global.scene = 'upgrade'
-			upgradeTime.emit()
-			get_tree().change_scene_to_file("res://upgrade_select.tscn")
+	#elif event == 'upgradeSelect':
+		#if Global.scene != 'upgrade':
+			#Global.scene = 'upgrade'
+			#upgradeTime.emit()
+			##get_tree().change_scene_to_file("res://upgrade_select.tscn")
 	elif event == 'left':
 		lobby = null
 		names = {}

@@ -1206,7 +1206,7 @@ theme = ExtResource("1_lbr8e")
 theme_override_constants/outline_size = 25
 theme_override_font_sizes/normal_font_size = 45
 bbcode_enabled = true
-text = "[wave freq=5]Controls
+text = "[wave freq=5]Shaders
 "
 scroll_active = false
 horizontal_alignment = 1

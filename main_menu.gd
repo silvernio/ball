@@ -6,15 +6,20 @@ extends Control
 
 func _ready() -> void:
 	if Global.leavingScene == 'lobby':
+		#$AnimationPlayer.play("resetFromLobby")
 		$AnimationPlayer.play_backwards("sceneTransition")
+		print("wat")
 		await get_tree().create_timer(0.5).timeout
-	connect("settingsClosed", _settingsClosed)
-	BackgroundMusic.bus = "menu"
-	lobby.text = str(Global.seed)
-	username.text = Global.username
-	$AnimationPlayer.play_backwards("settingsPressed")
-	await get_tree().create_timer(0.35).timeout
-	$BALL.playing = true
+		$AnimationPlayer.play_backwards("settingsPressed")
+	else:
+		connect("settingsClosed", _settingsClosed)
+		BackgroundMusic.bus = "menu"
+		lobby.text = str(Global.seed)
+		username.text = Global.username
+		$AnimationPlayer.play_backwards("settingsPressed")
+		await get_tree().create_timer(0.35).timeout
+		$BALL.playing = true
+		
 
 func _on_play_button_down() -> void:
 	Global.leavingScene = 'menu'

@@ -170,89 +170,89 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("settings:position:x")
+tracks/1/path = NodePath("race:position:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(452, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(828, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("settings:position:y")
+tracks/2/path = NodePath("race:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(1102, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(413.5, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("username:position:x")
+tracks/3/path = NodePath("settings:position:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(344, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(449, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("username:position:y")
+tracks/4/path = NodePath("settings:position:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(1025, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(565, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("lobby:position:x")
+tracks/5/path = NodePath("username:position:x")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(344, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(341, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("lobby:position:y")
+tracks/6/path = NodePath("username:position:y")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(942, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(488, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/7/type = "bezier"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("race:position:x")
+tracks/7/path = NodePath("lobby:position:x")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(831, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(341, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/8/type = "bezier"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("race:position:y")
+tracks/8/path = NodePath("lobby:position:y")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(950.5, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(405, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/9/type = "bezier"
@@ -263,7 +263,7 @@ tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(504, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(504, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/10/type = "bezier"
@@ -274,7 +274,7 @@ tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(820.337, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(296.982, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/11/type = "bezier"
@@ -284,8 +284,8 @@ tracks/11/path = NodePath("title:position:x")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(93, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(93, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/12/type = "bezier"
@@ -295,8 +295,8 @@ tracks/12/path = NodePath("title:position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"handle_modes": PackedInt32Array(2),
-"points": PackedFloat32Array(-778, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-38.5, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -488,7 +488,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -483.0
 offset_top = -778.0
-offset_right = 481.00317
+offset_right = 541.0
 offset_bottom = -340.99994
 grow_horizontal = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -506,6 +506,7 @@ bbcode_enabled = true
 text = "[wave amp=50][rainbow]BALL"
 fit_content = true
 scroll_active = false
+horizontal_alignment = 1
 
 [node name="play" type="Button" parent="." unique_id=469381946]
 texture_filter = 1
@@ -611,14 +612,14 @@ bus = &"BALL"
 playback_type = 1
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
-[connection signal="button_down" from="play" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]
+[connection signal="button_down" from="play" to="." method="_on_play_button_down"]
 [connection signal="mouse_entered" from="play" to="." method="_on_mouse_hover"]
 [connection signal="text_changed" from="lobby" to="." method="_on_lobby_text_changed"]
 [connection signal="text_changed" from="username" to="." method="_on_username_text_changed"]
 [connection signal="mouse_entered" from="settings" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="settings" to="." method="_clicksound"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
 [connection signal="mouse_entered" from="race" to="." method="_on_mouse_hover"]
-[connection signal="toggled" from="race" to="." method="_on_race_toggled"]
 [connection signal="toggled" from="race" to="." method="_clicksound"]
+[connection signal="toggled" from="race" to="." method="_on_race_toggled"]
