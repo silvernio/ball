@@ -648,8 +648,8 @@ island = ExtResource("11_mfdv2")
 islands = NodePath("../islands")
 
 [node name="player" parent="." unique_id=1172594184 node_paths=PackedStringArray("camera") instance=ExtResource("2_feb5d")]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 camera = NodePath("../camera")
 
 [node name="players" type="Node3D" parent="." unique_id=561818735 node_paths=PackedStringArray("playersList", "player")]
@@ -778,6 +778,8 @@ shape = SubResource("ConcavePolygonShape3D_mfdv2")
 [node name="finish" type="Area3D" parent="." unique_id=159195265]
 physics_interpolation_mode = 1
 visible = false
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("8_j5wjh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="finish" unique_id=1862362573]

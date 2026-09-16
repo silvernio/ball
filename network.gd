@@ -289,10 +289,10 @@ func _on_socket_io_socket_disconnected() -> void:
 func _player_finished():
 	if Global.toast == true:
 		print('first')
-		if client.lobby.finished.length == client.lobby.players.length:
-			Global.toast = false
-			print('second')
+		#if client.lobby.finished.length == client.lobby.players.length:
+		Global.toast = false
+		print('second')
 		#print(client.lobby.finished.length)
 		#print(client.lobby.players.length)
-			client.emit('upgrades')
+		client.emit('upgrades')
 			
