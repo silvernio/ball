@@ -417,7 +417,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_215e1"]
 resource_name = "startTimer"
 length = 4.0
-step = 0.01
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -548,14 +548,14 @@ tracks/11/path = NodePath("../../../Smoke:playing")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3, 3.1000001, 3.2, 3.3, 3.4, 3.5, 3.6000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [true, true, true]
+"values": [true, true, true, true, true, true, true, true, true, true]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
-tracks/12/enabled = true
+tracks/12/enabled = false
 tracks/12/path = NodePath("../../../Veryloudairhorn:playing")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
