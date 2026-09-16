@@ -17,7 +17,7 @@ func _ready() -> void:
 		lobby.text = str(Global.seed)
 		username.text = Global.username
 		$AnimationPlayer.play_backwards("settingsPressed")
-		await get_tree().create_timer(0.35).timeout
+		await get_tree().create_timer(0.15).timeout
 		$BALL.playing = true
 		
 

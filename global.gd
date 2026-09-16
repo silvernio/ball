@@ -8,6 +8,7 @@ var startTime = -1
 var voidLevel = 0
 var time = 0
 var running = false
+var toast = false
 var place = ''
 
 var isReady = false

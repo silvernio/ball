@@ -648,6 +648,8 @@ island = ExtResource("11_mfdv2")
 islands = NodePath("../islands")
 
 [node name="player" parent="." unique_id=1172594184 node_paths=PackedStringArray("camera") instance=ExtResource("2_feb5d")]
+collision_layer = 2
+collision_mask = 2
 camera = NodePath("../camera")
 
 [node name="players" type="Node3D" parent="." unique_id=561818735 node_paths=PackedStringArray("playersList", "player")]
@@ -670,6 +672,8 @@ players = NodePath("../players")
 
 [node name="platform" type="StaticBody3D" parent="random" unique_id=656931517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5836864, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform" unique_id=2136472144]
 mesh = SubResource("CylinderMesh_ryrav")
@@ -679,6 +683,8 @@ shape = SubResource("CylinderShape3D_eow3j")
 
 [node name="platform2" type="StaticBody3D" parent="random" unique_id=263619817]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3067126, 0.22626007, 0.5589342)
+collision_layer = 3
+collision_mask = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform2" unique_id=95366334]
 mesh = SubResource("CylinderMesh_ryrav")
@@ -688,6 +694,8 @@ shape = SubResource("CylinderShape3D_eow3j")
 
 [node name="platform3" type="StaticBody3D" parent="random" unique_id=398973172]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4918017, 0.48135495, 1.8020115)
+collision_layer = 3
+collision_mask = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform3" unique_id=1309842893]
 mesh = SubResource("CylinderMesh_ryrav")
@@ -697,6 +705,8 @@ shape = SubResource("CylinderShape3D_eow3j")
 
 [node name="platform4" type="StaticBody3D" parent="random" unique_id=1714697284]
 transform = Transform3D(10, 0, 0, 0, 2, 0, 0, 0, 10, -9.076912, 0.86461616, 7.137403)
+collision_layer = 3
+collision_mask = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="random/platform4" unique_id=2005071409]
 mesh = SubResource("CylinderMesh_ryrav")
@@ -1047,12 +1057,12 @@ playback_type = 1
 
 [connection signal="body_entered" from="finish" to="finish" method="_on_body_entered"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_clicksound"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_on_lobby_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_clicksound"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/settings button" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_clicksound"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_clicksound"]
 [connection signal="settingsClosed" from="CanvasLayer/Control/optionsMenu" to="." method="_settingsClosed"]

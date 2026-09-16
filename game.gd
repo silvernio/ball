@@ -40,6 +40,7 @@ func _physics_process(_delta: float) -> void:
 		Global.startTime = -1
 		Global.time = 0
 		Global.running = true
+		Global.toast = true
 		Global.isReady = false
 	
 	if Input.is_action_just_pressed("esc"):

@@ -607,19 +607,20 @@ mesh = SubResource("BoxMesh_glbon")
 
 [node name="BALL" type="AudioStreamPlayer2D" parent="." unique_id=1812899838]
 stream = ExtResource("4_jix8l")
-volume_db = 4.905
+volume_db = 4.5
+panning_strength = 0.0
 bus = &"BALL"
 playback_type = 1
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
-[connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="play" to="." method="_on_mouse_hover"]
 [connection signal="text_changed" from="lobby" to="." method="_on_lobby_text_changed"]
 [connection signal="text_changed" from="username" to="." method="_on_username_text_changed"]
 [connection signal="mouse_entered" from="settings" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="settings" to="." method="_clicksound"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="settings" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="race" to="." method="_on_mouse_hover"]
-[connection signal="toggled" from="race" to="." method="_clicksound"]
 [connection signal="toggled" from="race" to="." method="_on_race_toggled"]
+[connection signal="toggled" from="race" to="." method="_clicksound"]

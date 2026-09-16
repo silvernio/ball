@@ -161,7 +161,7 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 			Global.scene = 'lobby'
 			get_tree().change_scene_to_file("res://lobby_menu.tscn")
 		else:
-			on_names.emit(names)		
+			on_names.emit(names)
 		if len(names.keys()) == 1:
 			emit('options', options)
 	elif event == 'startGame':
@@ -218,11 +218,12 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		options = msg[0]
 		lastOptions = options.duplicate()
 		options_changed.emit()
-	#elif event == 'upgradeSelect':
-		#if Global.scene != 'upgrade':
-			#Global.scene = 'upgrade'
-			#upgradeTime.emit()
-			##get_tree().change_scene_to_file("res://upgrade_select.tscn")
+	elif event == 'upgradeSelect':
+		print("ahfjhd")
+		if Global.scene != 'upgrade':
+			Global.scene = 'upgrade'
+			upgradeTime.emit()
+			get_tree().change_scene_to_file("res://upgrade_select.tscn")
 	elif event == 'left':
 		lobby = null
 		names = {}
@@ -286,10 +287,12 @@ func _on_socket_io_socket_disconnected() -> void:
 	#$reconnect.start()
 
 func _player_finished():
-	if Global.running:
+	if Global.toast == true:
 		print('first')
 		if client.lobby.finished.length == client.lobby.players.length:
+			Global.toast = false
 			print('second')
-			print(client.lobby.finished.length)
-			print(client.lobby.players.length)
+		#print(client.lobby.finished.length)
+		#print(client.lobby.players.length)
 			client.emit('upgrades')
+			
