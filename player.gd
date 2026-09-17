@@ -42,6 +42,7 @@ func _ready() -> void:
 	Network.spawn.connect(_spawn)
 	username.text = Global.username
 	lastPosition = position
+	Sfx.get_node("wind_sfx").play()
 	
 func tp(pos):
 	var dif = pos - position
@@ -69,9 +70,9 @@ func _physics_process(delta: float) -> void:
 		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	#if velocity.length() < 10:
 	$speed_lines.material.set_shader_parameter("line_density", min(velocity.length()/30, 0.7))
-	Sfx.get_node("wind_sfx").play()
-	#Sfx.get_node("wind_sfx").volume_db = velocity.length()-40
-	print(velocity.length())
+	Sfx.get_node("wind_sfx").volume_db = min(velocity.length()*1.4-60, -20)
+	Sfx.get_node("wind_sfx").pitch_scale = min(velocity.length()/40+1, 2)
+	print (min(max(velocity.length()/40-10, 0)+1, 2))
 	
 	if floort > 0:
 		Global.distance = $'../track'.get_distance(global_position)

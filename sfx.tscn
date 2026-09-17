@@ -21,5 +21,6 @@ playback_type = 1
 [node name="wind_sfx" type="AudioStreamPlayer" parent="." unique_id=304233254]
 stream = ExtResource("4_fd8gk")
 volume_db = -18.288
+pitch_scale = 1.82
 playback_type = 1
 parameters/looping = true
