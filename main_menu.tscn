@@ -265,9 +265,9 @@ tracks/8/path = NodePath("play:position:x")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(504, -0.25, 0, 0.25, 0, 504, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0.3, 0.6)
+"handle_modes": PackedInt32Array(2, 0, 2),
+"points": PackedFloat32Array(504, 0, 0, 0.016666668, 0, 504, 0, 0, 0.016666668, 0, 504, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
@@ -276,9 +276,9 @@ tracks/9/path = NodePath("play:position:y")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(296.982, -0.25, 0, 0.25, 0, 820.337, -0.050000004, -87.22583, 0, 0),
-"times": PackedFloat32Array(0.3, 0.6)
+"handle_modes": PackedInt32Array(2, 0, 2),
+"points": PackedFloat32Array(344, 0, 0, 0, 0.5, 344, 0, 0, 0, 0, 820.337, -0.050000004, -87.22583, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -425,7 +425,7 @@ tracks/9/path = NodePath("play:position:x")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(504, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
@@ -436,8 +436,8 @@ tracks/10/path = NodePath("play:position:y")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(296.982, -0.0005, 0, 0.0005, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(333.477, -0.0005, 0, 0.0005, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/11/type = "bezier"
@@ -579,9 +579,9 @@ tracks/8/path = NodePath("play:position:x")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(504, -0.25, 0, 0.25, 0, 504, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0.3, 0.6)
+"handle_modes": PackedInt32Array(2, 0, 2),
+"points": PackedFloat32Array(504, 0, 0, 0.050000004, 0, 504, -0.25, 0, 0.25, 0, 504, -0.050000004, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
@@ -590,9 +590,9 @@ tracks/9/path = NodePath("play:position:y")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(296.982, -0.25, 0, 0.25, 0, 820.337, -0.050000004, -87.22583, 0, 0),
-"times": PackedFloat32Array(0.3, 0.6)
+"handle_modes": PackedInt32Array(2, 0, 2),
+"points": PackedFloat32Array(333.477, 0, 0, 0.050000004, -6.0824995, 296.982, -0.25, 0, 0.25, 0, 820.337, -0.050000004, -87.22583, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -688,7 +688,7 @@ anchor_right = 0.5
 offset_left = -72.0
 offset_top = 820.337
 offset_right = 72.0
-offset_bottom = 891.33704
+offset_bottom = 891.337
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -711,7 +711,7 @@ anchor_bottom = 0.5
 offset_left = -232.0
 offset_top = 618.0
 offset_right = 238.0
-offset_bottom = 679.0004
+offset_bottom = 679.00037
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
