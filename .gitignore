@@ -9,4 +9,4 @@ build/
 *.svg.import
 *.png.import
 *.jpg.import
-*.import
+**/*.import
