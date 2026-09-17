@@ -9,7 +9,12 @@ func _ready() -> void:
 		#$AnimationPlayer.play("resetFromLobby")
 		$AnimationPlayer.play_backwards("sceneTransition")
 		print("wat")
-		await get_tree().create_timer(0.5).timeout
+		#await get_tree().create_timer(0.5).timeout
+		#$AnimationPlayer.play_backwards("settingsPressed")
+	elif Global.leavingScene == 'menu':
+		BackgroundMusic.bus = "menu"
+		lobby.text = str(Global.seed)
+		username.text = Global.username
 		$AnimationPlayer.play_backwards("settingsPressed")
 	else:
 		connect("settingsClosed", _settingsClosed)
@@ -19,7 +24,7 @@ func _ready() -> void:
 		$AnimationPlayer.play_backwards("settingsPressed")
 		await get_tree().create_timer(0.15).timeout
 		$BALL.playing = true
-		
+	
 
 func _on_play_button_down() -> void:
 	Global.leavingScene = 'menu'
