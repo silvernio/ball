@@ -11,7 +11,7 @@ func _ready() -> void:
 	BackgroundMusic.bus = "inGame"
 	connect("settingsClosed", _settingsClosed)
 	Global.running = not Global.race
-	Global.isReady = false
+	Global.isReady = true
 	#if Global.running == false:
 		#$upgradeSelect/AnimationPlayer.play("upgradesShow")
 	#else:
