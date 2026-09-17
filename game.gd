@@ -5,13 +5,16 @@ extends Node3D
 @export var start: Label
 
 func _ready() -> void:
-
+	
 	Network.newRace.connect(_global_modifier)
 	Network.spawn.connect(_on_spawn)
 	BackgroundMusic.bus = "inGame"
 	connect("settingsClosed", _settingsClosed)
 	Global.running = not Global.race
 	Global.isReady = false
+	#if Global.running == false:
+		#$upgradeSelect/AnimationPlayer.play("upgradesShow")
+	#else:
 
 func _on_spawn(_index):
 	if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":

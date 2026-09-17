@@ -307,7 +307,6 @@ icon_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350405399]
 libraries/ = SubResource("AnimationLibrary_87uu4")
-autoplay = &"upgradesShow"
 
 [node name="readyUp" type="Button" parent="." unique_id=955149222]
 texture_filter = 1
@@ -315,7 +314,7 @@ layout_mode = 0
 offset_left = 77.0
 offset_top = 634.34
 offset_right = 1064.0
-offset_bottom = 887.3394
+offset_bottom = 887.3392
 scale = Vector2(0.25, 0.25)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("6_1cx38")
