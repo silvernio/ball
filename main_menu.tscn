@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b4n0jm82clx84" path="res://options_menu.tscn" id="3_jix8l"]
 [ext_resource type="AudioStream" uid="uid://xcfcn5ml2ai5" path="res://sound and music/BALL.mp3" id="4_jix8l"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_jix8l"]
+
 [sub_resource type="Animation" id="Animation_fu7sn"]
 length = 0.001
 tracks/0/type = "value"
@@ -626,8 +628,6 @@ _data = {
 
 [sub_resource type="BoxMesh" id="BoxMesh_glbon"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_jix8l"]
-
 [node name="main menu" type="Control" unique_id=781025603 node_paths=PackedStringArray("lobby", "username", "race")]
 layout_mode = 3
 anchors_preset = 15
@@ -640,6 +640,12 @@ script = ExtResource("1_7vrkn")
 lobby = NodePath("lobby")
 username = NodePath("username")
 race = NodePath("race")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=296430279]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(63.999996, 63.999996)
+scale = Vector2(40.5, 40.5)
+mesh = SubResource("QuadMesh_jix8l")
 
 [node name="optionsMenu" parent="." unique_id=1047845583 instance=ExtResource("3_jix8l")]
 layout_mode = 1
@@ -776,11 +782,8 @@ panning_strength = 0.0
 bus = &"BALL"
 playback_type = 1
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=296430279]
-modulate = Color(1, 0, 0, 1)
-position = Vector2(63.999996, 63.999996)
-scale = Vector2(40.5, 40.5)
-mesh = SubResource("QuadMesh_jix8l")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1684858952]
+zoom = Vector2(0.495, 0.495)
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]

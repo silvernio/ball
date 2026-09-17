@@ -6,9 +6,13 @@ extends Control
 
 func _ready() -> void:
 	if Global.leavingScene == 'lobby':
-		#$AnimationPlayer.play("resetFromLobby")
+		print($AnimationPlayer.current_animation)
+		$AnimationPlayer.play("resetFromLobby")
+		await get_tree().create_timer(0.1).timeout
+		print($AnimationPlayer.current_animation)
 		$AnimationPlayer.play_backwards("sceneTransition")
 		print("wat")
+		print($AnimationPlayer.current_animation)
 		#await get_tree().create_timer(0.5).timeout
 		#$AnimationPlayer.play_backwards("settingsPressed")
 	elif Global.leavingScene == 'menu':
