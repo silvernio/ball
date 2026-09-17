@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c52axagcjvx8v"
 path.s3tc="res://.godot/imported/pngtree-golf-ball-3d-element-png-image_14621624.png-294191e395420a6fb78e564d4ce2ba09.s3tc.ctex"
+path.etc2="res://.godot/imported/pngtree-golf-ball-3d-element-png-image_14621624.png-294191e395420a6fb78e564d4ce2ba09.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://pngtree-golf-ball-3d-element-png-image_14621624.png"
-dest_files=["res://.godot/imported/pngtree-golf-ball-3d-element-png-image_14621624.png-294191e395420a6fb78e564d4ce2ba09.s3tc.ctex"]
+dest_files=["res://.godot/imported/pngtree-golf-ball-3d-element-png-image_14621624.png-294191e395420a6fb78e564d4ce2ba09.s3tc.ctex", "res://.godot/imported/pngtree-golf-ball-3d-element-png-image_14621624.png-294191e395420a6fb78e564d4ce2ba09.etc2.ctex"]
 
 [params]
 

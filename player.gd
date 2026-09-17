@@ -119,8 +119,8 @@ func _physics_process(delta: float) -> void:
 	var addSpeed = clamp(1 + moveSpeed ** 2 / 3, 1, 10)
 	
 	#print(Vector2(velocity.x, velocity.z).normalized())
-	var diffModifier = 1 + (1 - (Vector2(velocity.x, velocity.z).normalized().dot(Vector2(wasd.x, -wasd.z)) + 1) / 2) 
-	
+	#var diffModifier = 1 + (1 - (Vector2(velocity.x, velocity.z).normalized().dot(Vector2(wasd.x, -wasd.z)) + 1) / 2) 
+	var diffModifier = 1
 	
 	frictionModifier *= diffModifier
 	
@@ -229,13 +229,16 @@ func _physics_process(delta: float) -> void:
 	Network.data.ry = mesh.rotation.y
 	Network.data.rz = mesh.rotation.z
 	
+	core.global_position = global_position
+	
 func _process(delta: float) -> void:
 	#rotate player by velocity
 	mesh.rotate(Vector3(0, 0, 1), -velocity.x * delta * 2)
 	mesh.rotate(Vector3(1, 0, 0), velocity.z * delta * 2)
 	
-	var alpha = Engine.get_physics_interpolation_fraction()
-	core.global_position = core.global_position.lerp(lastPosition.lerp(global_position, alpha), clamp(delta * 50, 0, 1))
+	#var alpha = Engine.get_physics_interpolation_fraction()
+	#core.global_position = core.global_position.lerp(lastPosition.lerp(global_position, alpha), clamp(delta * 50, 0, 1))
+	
 	
 	#scaleVel += (Vector3.ONE - scaleNode.scale) / 10
 	#scaleNode.scale += scaleVel
