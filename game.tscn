@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://da7dasqxngmk1" path="res://players.gd" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://dovjqn5n6qnrn" path="res://network_player.tscn" id="4_fc0e3"]
 [ext_resource type="Script" uid="uid://c22tp7wdyuqea" path="res://camera.gd" id="5_7jktm"]
+[ext_resource type="Shader" uid="uid://c3rtkols56thv" path="res://speed_lines.gdshader" id="5_e8heu"]
+[ext_resource type="AudioStream" uid="uid://dvt555urwk0sm" path="res://soundreality-wind-lake-sfx-522908.mp3" id="6_rvswv"]
 [ext_resource type="Theme" uid="uid://6thw543k5i1t" path="res://gui.tres" id="6_ryrav"]
 [ext_resource type="PackedScene" uid="uid://ctosjx6bcrfi" path="res://player_element.tscn" id="7_eow3j"]
 [ext_resource type="Script" uid="uid://crsc18gj6w1de" path="res://finish.gd" id="8_j5wjh"]
@@ -35,6 +37,24 @@ sky = SubResource("Sky_feb5d")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.2
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rvswv"]
+noise_type = 5
+frequency = 0.5
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_boyg6"]
+noise = SubResource("FastNoiseLite_rvswv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e36ub"]
+shader = ExtResource("5_e8heu")
+shader_parameter/noise = SubResource("NoiseTexture2D_boyg6")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/line_count = 0.65000000968578
+shader_parameter/line_density = 0.50000002375
+shader_parameter/line_faloff = 0.7270000345325
+shader_parameter/mask_size = 0.0
+shader_parameter/mask_edge = 0.7210000342475
+shader_parameter/animation_speed = 20.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
 albedo_color = Color(0, 0.33740154, 0.5662666, 1)
@@ -652,6 +672,18 @@ islands = NodePath("../islands")
 collision_layer = 3
 collision_mask = 3
 camera = NodePath("../camera")
+
+[node name="speed_lines" type="ColorRect" parent="player" unique_id=1680650579]
+material = SubResource("ShaderMaterial_e36ub")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="wind_sfx" type="AudioStreamPlayer" parent="player" unique_id=914551382]
+stream = ExtResource("6_rvswv")
+volume_db = -19.468
 
 [node name="players" type="Node3D" parent="." unique_id=561818735 node_paths=PackedStringArray("playersList", "player")]
 script = ExtResource("3_feb5d")

@@ -67,6 +67,11 @@ func _physics_process(delta: float) -> void:
 		#Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	#elif Input.is_action_pressed("esc"):
 		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	#if velocity.length() < 10:
+	$speed_lines.material.set_shader_parameter("line_density", min(velocity.length()/30, 0.7))
+	$wind_sfx.play()
+	$wind_sfx.volume_db = velocity.length()-60
+	print(velocity.length())
 	
 	if floort > 0:
 		Global.distance = $'../track'.get_distance(global_position)
