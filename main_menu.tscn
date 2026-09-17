@@ -642,6 +642,7 @@ username = NodePath("username")
 race = NodePath("race")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=296430279]
+visible = false
 modulate = Color(1, 0, 0, 1)
 position = Vector2(63.999996, 63.999996)
 scale = Vector2(40.5, 40.5)
