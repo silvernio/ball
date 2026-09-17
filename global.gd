@@ -11,6 +11,7 @@ var running = false
 var toast = false
 var place = ''
 
+var upgrading = false
 var isReady = false
 var inGame = false
 var scene = 'menu'
