@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxs5bswyf1ni3"
+path.s3tc="res://.godot/imported/Screenshot 2026-01-04 170504.png-07e1a46961bca1ac18f9adad148a05ab.s3tc.ctex"
 path.etc2="res://.godot/imported/Screenshot 2026-01-04 170504.png-07e1a46961bca1ac18f9adad148a05ab.etc2.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Screenshot 2026-01-04 170504.png"
-dest_files=["res://.godot/imported/Screenshot 2026-01-04 170504.png-07e1a46961bca1ac18f9adad148a05ab.etc2.ctex"]
+dest_files=["res://.godot/imported/Screenshot 2026-01-04 170504.png-07e1a46961bca1ac18f9adad148a05ab.s3tc.ctex", "res://.godot/imported/Screenshot 2026-01-04 170504.png-07e1a46961bca1ac18f9adad148a05ab.etc2.ctex"]
 
 [params]
 
