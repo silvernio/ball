@@ -59,3 +59,6 @@ func _on_mouse_hover() -> void:
 	Sfx.get_node("browseSFX").play()
 func _clicksound():
 	Sfx.get_node("clickSFX").play()
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://upgrade_select.tscn")

@@ -813,6 +813,14 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 
+[node name="Button" type="Button" parent="." unique_id=496494314]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 512.0
+offset_right = 152.0
+offset_bottom = 560.0
+text = "test"
+
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
@@ -825,3 +833,4 @@ horizontal_alignment = 1
 [connection signal="mouse_entered" from="race" to="." method="_on_mouse_hover"]
 [connection signal="toggled" from="race" to="." method="_clicksound"]
 [connection signal="toggled" from="race" to="." method="_on_race_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1059,10 +1059,6 @@ bus = &"pause"
 playback_type = 1
 
 [node name="upgradeSelect" parent="." unique_id=1126848186 instance=ExtResource("17_e8heu")]
-offset_left = 2678.8801
-offset_top = 1473.3441
-offset_right = 587.90405
-offset_bottom = 304.99182
 
 [connection signal="body_entered" from="finish" to="finish" method="_on_body_entered"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_on_mouse_hover"]
