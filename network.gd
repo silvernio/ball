@@ -20,9 +20,9 @@ var data = {
 }
 
 var options = {
-	'length': 100,
-	'turning': 0.5,
-	'trackSize': 1,
+	'length': 150,
+	'turning': 0.2,
+	'trackSize': 2.5,
 	'globalModChance': 3,
 	'jumps': false,
 	'speed': 5,
@@ -38,8 +38,8 @@ var options = {
 #}
 
 var activeModifiers = {
-	'speed': 5,
-	'rhino': false,
+	'speed': 0.20,
+	'dash': false,
 	'grab': false
 }
 
@@ -172,6 +172,14 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 			Global.time = 0
 			Global.place = ''
 			get_tree().change_scene_to_file("res://game.tscn")
+	elif event == 'joinedLate':
+		if Global.scene != 'game':
+			Global.scene = 'game'
+			Global.running = false
+			Global.startTime = -1
+			Global.time = 0
+			Global.place = ''
+			get_tree().change_scene_to_file("res://game.tscn")
 	elif event == 'start':
 		globalMod = msg[1]
 		newRace.emit()
@@ -288,11 +296,11 @@ func _on_socket_io_socket_disconnected() -> void:
 
 func _player_finished():
 	if Global.toast == true:
-		print('first')
-		#if client.lobby.finished.length == client.lobby.players.length:
-			#Global.toast = false
-			#print('second')
-		##print(client.lobby.finished.length)
-		##print(client.lobby.players.length)
-			#client.emit('upgrades')
+		#print('first')
+		if client.lobby.finished.length == client.lobby.players.length:
+			Global.toast = false
+		#print('second')
+		#print(client.lobby.finished.length)
+		#print(client.lobby.players.length)
+			client.emit('upgrades')
 			

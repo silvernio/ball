@@ -365,7 +365,7 @@ tooltip_text = "increase or decrease the length of each tracks generation"
 min_value = 10.0
 max_value = 500.0
 step = 10.0
-value = 100.0
+value = 150.0
 metadata/_edit_use_anchors_ = true
 
 [node name="lengthLabel" type="Label" parent="track/length" unique_id=1464769341]
@@ -387,7 +387,7 @@ offset_right = 932.5625
 offset_bottom = 73.0
 min_value = 10.0
 max_value = 99999.0
-value = 100.0
+value = 150.0
 metadata/_edit_use_anchors_ = true
 
 [node name="turning" type="Control" parent="track" unique_id=329729720]
@@ -405,7 +405,7 @@ tooltip_text = "increase or decrease the intensity of turns"
 min_value = -5.0
 max_value = 5.0
 step = 0.1
-value = 1.0
+value = 0.20000000000000018
 metadata/_edit_use_anchors_ = true
 
 [node name="turningLabel" type="Label" parent="track/turning" unique_id=1659617537]
@@ -428,7 +428,7 @@ offset_bottom = 134.0
 min_value = -5.0
 max_value = 5.0
 step = 0.1
-value = 0.5
+value = 0.20000000000000018
 metadata/_edit_use_anchors_ = true
 
 [node name="size" type="Control" parent="track" unique_id=760656755]
@@ -446,7 +446,7 @@ tooltip_text = "increase or decrease the width of the track"
 min_value = -1.0
 max_value = 10.0
 step = 0.1
-value = 1.0
+value = 2.5
 metadata/_edit_use_anchors_ = true
 
 [node name="sizeLabel" type="Label" parent="track/size" unique_id=1783075342]
@@ -469,7 +469,7 @@ offset_bottom = 194.0
 min_value = -1.0
 max_value = 10.0
 step = 0.1
-value = 1.0
+value = 2.5
 metadata/_edit_use_anchors_ = true
 
 [node name="globalChance" type="Control" parent="track" unique_id=1264171553]
@@ -484,7 +484,8 @@ offset_top = 176.0
 offset_right = 839.99994
 offset_bottom = 192.0
 tooltip_text = "increase or decrease the chance for a global modifier"
-max_value = 5.0
+min_value = 1.0
+max_value = 6.0
 value = 3.0
 
 [node name="globalLabel" type="Label" parent="track/globalChance" unique_id=450594220]
@@ -497,7 +498,7 @@ offset_bottom = 176.0
 theme_override_font_sizes/font_size = 28
 text = "chance for global modifier"
 
-[node name="globlValLabel" type="Label" parent="track/globalChance" unique_id=403619039]
+[node name="globalValLabel" type="Label" parent="track/globalChance" unique_id=403619039]
 texture_filter = 1
 layout_mode = 0
 offset_left = 848.0

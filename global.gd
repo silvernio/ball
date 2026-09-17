@@ -26,7 +26,8 @@ var userSettings = {
 }
 
 var modifierModifications = {
-	'speed': 0.10,
+	'speed': 2.10,
+	#'dash': false,
 }
 
 var progress = -1

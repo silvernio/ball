@@ -5,6 +5,7 @@ extends Control
 @export var race: CheckBox
 
 func _ready() -> void:
+	print(Network.activeModifiers.keys().pick_random())
 	if Global.leavingScene == 'lobby':
 		$AnimationPlayer.play("resetFromLobby")
 		await $AnimationPlayer.animation_finished

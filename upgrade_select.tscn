@@ -72,3 +72,7 @@ theme_override_fonts/font = ExtResource("6_1cx38")
 theme_override_font_sizes/font_size = 208
 toggle_mode = true
 text = "Lock In"
+
+[connection signal="toggled" from="upgrade1" to="." method="_on_upgrade_1_toggled"]
+[connection signal="toggled" from="upgrade2" to="." method="_on_upgrade_2_toggled"]
+[connection signal="toggled" from="upgrade3" to="." method="_on_upgrade_3_toggled"]

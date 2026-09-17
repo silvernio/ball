@@ -1,7 +1,7 @@
 extends Control
 
 var players = []
-var mapLength = 100
+var mapLength = 150
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,11 +55,12 @@ func _optionsChanged():
 	$track/turning/turningVal.value = Network.options.turning
 	$track/size/sizeBox.value = Network.options.trackSize
 	$track/size/sizeVal.value = Network.options.trackSize
-	$track/globalChance/globlValLabel.text = "1 in " + str(int(Network.options.globalModChance))
 	if $track/globalChance/globalVal.value == 1:
-		$track/globalChance/globlValLabel.text = "always"
-	elif $track/globalChance/globalVal.value == 0:
-		$track/globalChance/globlValLabel.text = "never"
+		$track/globalChance/globalValLabel.text = "always"
+	elif $track/globalChance/globalVal.value == 6:
+		$track/globalChance/globalValLabel.text = "never"
+	else:
+		$track/globalChance/globalValLabel.text = "1 in " + str(int(Network.options.globalModChance))
 	$track/globalChance/globalVal.value = Network.options.globalModChance
 	
 	#player settings
@@ -129,11 +130,11 @@ func _clicksound():
 	Sfx.get_node("clickSFX").play()
 
 func _on_global_val_value_changed(value: float) -> void:
-	$track/globalChance/globlValLabel.text = "1 in " + str(int($track/globalChance/globalVal.value))
+	$track/globalChance/globalValLabel.text = "1 in " + str(int($track/globalChance/globalVal.value))
 	if $track/globalChance/globalVal.value == 1:
-		$track/globalChance/globlValLabel.text = "always"
-	elif $track/globalChance/globalVal.value == 0:
-		$track/globalChance/globlValLabel.text = "never"
+		$track/globalChance/globalValLabel.text = "always"
+	elif $track/globalChance/globalVal.value == 6:
+		$track/globalChance/globalValLabel.text = "never"
 	Network.options.globalModChance = int($track/globalChance/globalVal.value)
 
 func _on_randomise_settings_toggled(toggled_on: bool) -> void:

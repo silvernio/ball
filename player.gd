@@ -273,5 +273,5 @@ func _spawn(index):
 
 func _upgrades():
 	upgradesGot.speedUp = Network.activeModifiers.speed
-	upgradesGot.rhinoMode = Network.activeModifiers.rhino
+	upgradesGot.rhinoMode = Network.activeModifiers.dash
 	upgradesGot.grab = Network.activeModifiers.grab
