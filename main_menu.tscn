@@ -782,9 +782,6 @@ panning_strength = 0.0
 bus = &"BALL"
 playback_type = 1
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1684858952]
-zoom = Vector2(0.495, 0.495)
-
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
