@@ -301,12 +301,12 @@ func _on_socket_io_socket_disconnected() -> void:
 
 func _player_finished():
 	if Global.toast == true:
-		pass
+		#pass
 		#print('first')
-		#if client.lobby.finished.length == client.lobby.players.length:
-			#Global.toast = false
-		##print('second')
-		##print(client.lobby.finished.length)
-		##print(client.lobby.players.length)
-			#client.emit('upgrades')
+		if client.lobby.finished.length == client.lobby.players.length:
+			Global.toast = false
+		#print('second')
+		#print(client.lobby.finished.length)
+		#print(client.lobby.players.length)
+			client.emit('upgrades')
 			
