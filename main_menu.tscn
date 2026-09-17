@@ -267,7 +267,7 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(2, 0, 0),
 "points": PackedFloat32Array(504, 0, 0, 0.016666668, 0, 504, 0, 0, 0.016666668, 0, 504, -0.050000004, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.3, 0.5)
+"times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
@@ -278,7 +278,7 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(2, 0, 0),
 "points": PackedFloat32Array(344, 0, 0, 0.2, -98.5, 344, 0, 0, 0.04, 5.585, 820.337, -0.050000004, -87.22583, 0, 0),
-"times": PackedFloat32Array(0, 0.3, 0.5)
+"times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -591,7 +591,7 @@ tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(2, 0, 2),
-"points": PackedFloat32Array(333.477, 0, 0, 0.050000004, -6.0824995, 296.982, -0.25, 0, 0.25, 0, 820.337, -0.050000004, -87.22583, 0, 0),
+"points": PackedFloat32Array(333.477, 0, 0, 0.2, -73.97699, 333.477, 0, -0.97698975, 0, -0.97698975, 820.337, -0.050000004, -87.22583, 0, 0),
 "times": PackedFloat32Array(0, 0.3, 0.6)
 }
 tracks/10/type = "bezier"
@@ -658,9 +658,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -483.0
-offset_top = -778.0
+offset_top = -38.5
 offset_right = 541.0
-offset_bottom = -340.99994
+offset_bottom = 398.50006
 grow_horizontal = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
 accessibility_name = "Title"
@@ -686,15 +686,15 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -72.0
-offset_top = 820.337
+offset_top = 333.477
 offset_right = 72.0
-offset_bottom = 891.337
+offset_bottom = 404.47705
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(0.82819706, 0.828197, 0.828197, 1)
-theme_override_constants/outline_size = 9
+theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 60
 text = "PLAY"
 flat = true
@@ -708,10 +708,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -232.0
-offset_top = 618.0
-offset_right = 238.0
-offset_bottom = 679.0007
+offset_left = -235.0
+offset_top = 81.0
+offset_right = 235.0
+offset_bottom = 142.00067
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
@@ -727,10 +727,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -232.0
-offset_top = 701.0
-offset_right = 238.0
-offset_bottom = 762.0012
+offset_left = -235.0
+offset_top = 164.0
+offset_right = 235.0
+offset_bottom = 225.0011
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_fu7sn")
@@ -741,10 +741,10 @@ max_length = 15
 
 [node name="settings" type="Button" parent="." unique_id=205067677]
 layout_mode = 0
-offset_left = 452.0
-offset_top = 1102.0
-offset_right = 703.0
-offset_bottom = 1160.0001
+offset_left = 449.0
+offset_top = 565.0
+offset_right = 700.0
+offset_bottom = 623.0
 theme = ExtResource("3_fu7sn")
 theme_override_font_sizes/font_size = 32
 text = "Settings"
@@ -756,10 +756,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 255.0
-offset_top = 626.5
-offset_right = 339.0
-offset_bottom = 657.50037
+offset_left = 252.0
+offset_top = 89.5
+offset_right = 336.0
+offset_bottom = 120.50037
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
