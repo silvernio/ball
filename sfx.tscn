@@ -3,6 +3,7 @@
 [ext_resource type="AudioStream" uid="uid://cieoshetx1bh4" path="res://click.mp3" id="1_a0u1m"]
 [ext_resource type="Script" uid="uid://b8ffpgrmb60yo" path="res://sfx.gd" id="1_ycbqo"]
 [ext_resource type="AudioStream" uid="uid://b5ktbqmadn1wd" path="res://browse.mp3" id="2_ycbqo"]
+[ext_resource type="AudioStream" uid="uid://dvt555urwk0sm" path="res://soundreality-wind-lake-sfx-522908.mp3" id="4_fd8gk"]
 
 [node name="sfx" type="Node" unique_id=892496859]
 script = ExtResource("1_ycbqo")
@@ -16,3 +17,9 @@ playback_type = 1
 stream = ExtResource("2_ycbqo")
 bus = &"clicks"
 playback_type = 1
+
+[node name="wind_sfx" type="AudioStreamPlayer" parent="." unique_id=304233254]
+stream = ExtResource("4_fd8gk")
+volume_db = -18.288
+playback_type = 1
+parameters/looping = true

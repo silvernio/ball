@@ -69,8 +69,8 @@ func _physics_process(delta: float) -> void:
 		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	#if velocity.length() < 10:
 	$speed_lines.material.set_shader_parameter("line_density", min(velocity.length()/30, 0.7))
-	$wind_sfx.play()
-	$wind_sfx.volume_db = velocity.length()-60
+	Sfx.get_node("wind_sfx").play()
+	#Sfx.get_node("wind_sfx").volume_db = velocity.length()-40
 	print(velocity.length())
 	
 	if floort > 0:
