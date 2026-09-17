@@ -626,6 +626,8 @@ _data = {
 
 [sub_resource type="BoxMesh" id="BoxMesh_glbon"]
 
+[sub_resource type="QuadMesh" id="QuadMesh_jix8l"]
+
 [node name="main menu" type="Control" unique_id=781025603 node_paths=PackedStringArray("lobby", "username", "race")]
 layout_mode = 3
 anchors_preset = 15
@@ -678,7 +680,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -72.0
 offset_top = 820.337
-offset_right = 258.0
+offset_right = 72.0
 offset_bottom = 891.33704
 grow_horizontal = 2
 size_flags_horizontal = 4
@@ -773,6 +775,12 @@ volume_db = 4.5
 panning_strength = 0.0
 bus = &"BALL"
 playback_type = 1
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=296430279]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(63.999996, 63.999996)
+scale = Vector2(40.5, 40.5)
+mesh = SubResource("QuadMesh_jix8l")
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]
