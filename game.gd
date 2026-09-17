@@ -17,13 +17,15 @@ func _ready() -> void:
 	#else:
 
 func _on_spawn(_index):
+	$CanvasLayer/Control/AnimationPlayer.play("transOut")
+	await get_tree().create_timer(.8).timeout
 	if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
 		$CanvasLayer/Control/AnimationPlayer.seek(0, true)
+	$CanvasLayer/Control/start.text = "3"
 	$CanvasLayer/Control/AnimationPlayer.play("startTimer")
 
+
 func _physics_process(_delta: float) -> void:
-	
-	
 	if Input.is_action_just_pressed('ready'):
 		$CanvasLayer/Control/optionsMenu.visible = false
 		if Global.race:
