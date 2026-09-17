@@ -31,6 +31,8 @@ var options = {
 	'randomiseSettings': false
 }
 
+var upgrades = []
+
 #var globalMods = {
 	#'lowGrav': false,
 	#'globalSticky': false,
@@ -171,6 +173,8 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 			Global.startTime = -1
 			Global.time = 0
 			Global.place = ''
+			Global.upgrading = true
+			upgrades = msg[0]
 			get_tree().change_scene_to_file("res://game.tscn")
 	elif event == 'joinedLate':
 		Global.scene = 'game'
@@ -178,6 +182,8 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		Global.startTime = -1
 		Global.time = 0
 		Global.place = ''
+		Global.upgrading = len(msg[0]) > 0
+		upgrades = msg[0]
 		get_tree().change_scene_to_file("res://game.tscn")
 	elif event == 'start':
 		globalMod = msg[1]
