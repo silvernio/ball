@@ -5,7 +5,7 @@ extends Node3D
 @export var start: Label
 
 func _ready() -> void:
-	
+	Network.upgradeTime.connect(_upgrades)
 	Network.newRace.connect(_global_modifier)
 	Network.spawn.connect(_on_spawn)
 	BackgroundMusic.bus = "inGame"
@@ -22,6 +22,8 @@ func _on_spawn(_index):
 	$CanvasLayer/Control/AnimationPlayer.play("startTimer")
 
 func _physics_process(_delta: float) -> void:
+	
+	
 	if Input.is_action_just_pressed('ready'):
 		$CanvasLayer/Control/optionsMenu.visible = false
 		if Global.race:
@@ -87,6 +89,9 @@ func _on_close_button_pressed() -> void:
 
 func _settingsClosed():
 	$CanvasLayer/Control/pauseMenu.visible = true
+
+func _upgrades():
+	$upgradeSelect/AnimationPlayer.play("upgradesShow")
 
 func _on_mouse_hover() -> void:
 	Sfx.get_node("browseSFX").play()

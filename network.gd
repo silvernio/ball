@@ -236,7 +236,7 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		if Global.scene != 'upgrade':
 			Global.scene = 'upgrade'
 			upgradeTime.emit()
-			get_tree().change_scene_to_file("res://upgrade_select.tscn")
+			#get_tree().change_scene_to_file("res://upgrade_select.tscn")
 	elif event == 'left':
 		lobby = null
 		names = {}
