@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dkpcbqblad3hv" path="res://leavingGame.png" id="13_215e1"]
 [ext_resource type="AudioStream" uid="uid://ccnponn1mlrlc" path="res://smoke.mp3" id="15_80cx4"]
 [ext_resource type="AudioStream" uid="uid://c0fqxsl5meo6m" path="res://veryloudairhorn.mp3" id="16_e8heu"]
+[ext_resource type="PackedScene" uid="uid://cu4hxnto5mnhq" path="res://upgrade_select.tscn" id="17_e8heu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e2o6t"]
 sky_top_color = Color(0.33153802, 0.8575765, 0.85415184, 1)
@@ -1056,6 +1057,12 @@ volume_db = -3.775
 panning_strength = 0.0
 bus = &"pause"
 playback_type = 1
+
+[node name="upgradeSelect" parent="." unique_id=1126848186 instance=ExtResource("17_e8heu")]
+offset_left = 2678.8801
+offset_top = 1473.3441
+offset_right = 587.90405
+offset_bottom = 304.99182
 
 [connection signal="body_entered" from="finish" to="finish" method="_on_body_entered"]
 [connection signal="mouse_entered" from="CanvasLayer/Control/pauseMenu/Panel/lobby button" to="." method="_on_mouse_hover"]

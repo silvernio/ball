@@ -173,13 +173,12 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 			Global.place = ''
 			get_tree().change_scene_to_file("res://game.tscn")
 	elif event == 'joinedLate':
-		if Global.scene != 'game':
-			Global.scene = 'game'
-			Global.running = false
-			Global.startTime = -1
-			Global.time = 0
-			Global.place = ''
-			get_tree().change_scene_to_file("res://game.tscn")
+		Global.scene = 'game'
+		Global.running = false
+		Global.startTime = -1
+		Global.time = 0
+		Global.place = ''
+		get_tree().change_scene_to_file("res://game.tscn")
 	elif event == 'start':
 		globalMod = msg[1]
 		newRace.emit()
