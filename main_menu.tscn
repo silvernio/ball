@@ -770,19 +770,6 @@ text = "Race"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=530484768]
 libraries/ = SubResource("AnimationLibrary_jix8l")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1408669242]
-modulate = Color(0, 0, 0, 1)
-position = Vector2(1868, 331)
-scale = Vector2(1324.5, 768.74994)
-mesh = SubResource("BoxMesh_glbon")
-
-[node name="BALL" type="AudioStreamPlayer2D" parent="." unique_id=1812899838]
-stream = ExtResource("4_jix8l")
-volume_db = 4.5
-panning_strength = 0.0
-bus = &"BALL"
-playback_type = 1
-
 [node name="verCount" type="RichTextLabel" parent="." unique_id=912371576]
 modulate = Color(0.41981313, 0.41981313, 0.4198131, 1)
 texture_filter = 1
@@ -821,6 +808,19 @@ offset_top = 512.0
 offset_right = 152.0
 offset_bottom = 560.0
 text = "test"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1408669242]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1868, 331)
+scale = Vector2(1324.5, 768.74994)
+mesh = SubResource("BoxMesh_glbon")
+
+[node name="BALL" type="AudioStreamPlayer2D" parent="." unique_id=1812899838]
+stream = ExtResource("4_jix8l")
+volume_db = 4.5
+panning_strength = 0.0
+bus = &"BALL"
+playback_type = 1
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
 [connection signal="button_down" from="play" to="." method="_clicksound"]

@@ -17,7 +17,7 @@ func _ready() -> void:
 		BackgroundMusic.bus = "menu"
 		lobby.text = str(Global.seed)
 		username.text = Global.username
-		$AnimationPlayer.play_backwards("settingsPressed")
+		$AnimationPlayer.play_backwards("opening")
 	else:
 		connect("settingsClosed", _settingsClosed)
 		BackgroundMusic.bus = "menu"
