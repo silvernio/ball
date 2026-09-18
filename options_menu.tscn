@@ -1265,7 +1265,9 @@ offset_top = -761.0
 offset_right = 171.99988
 offset_bottom = -744.9999
 grow_horizontal = 2
-value = 100.0
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="volumeMusic" type="Label" parent="." unique_id=156326424]
 texture_filter = 1
@@ -1309,7 +1311,9 @@ offset_top = -706.0
 offset_right = 172.0
 offset_bottom = -689.9999
 grow_horizontal = 2
-value = 100.0
+max_value = 1.0
+step = 0.01
+value = 1.0
 
 [node name="sfx" type="Label" parent="." unique_id=1699855838]
 texture_filter = 1
@@ -1416,8 +1420,8 @@ text = "return
 "
 
 [connection signal="mouse_entered" from="back" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="back" to="." method="_clicksound"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="back" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="volBox" to="." method="_on_mouse_hover"]
 [connection signal="mouse_entered" from="volSlider" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="volSlider" to="." method="_on_vol_slider_value_changed"]
@@ -1434,5 +1438,5 @@ text = "return
 [connection signal="mouse_entered" from="fovSlider" to="." method="_on_mouse_hover"]
 [connection signal="value_changed" from="fovSlider" to="." method="_on_fov_slider_value_changed"]
 [connection signal="mouse_entered" from="inGameBack" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="inGameBack" to="." method="_clicksound"]
 [connection signal="pressed" from="inGameBack" to="." method="_on_in_game_back_pressed"]
+[connection signal="pressed" from="inGameBack" to="." method="_clicksound"]

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cu4hxnto5mnhq"]
 
 [ext_resource type="Script" uid="uid://b4bpmrj4dbrbk" path="res://upgrade_select.gd" id="1_0cbif"]
-[ext_resource type="Texture2D" uid="uid://cgp2car2jn4ky" path="res://upgrade cards/speed_boost_card.png" id="2_3ru1o"]
+[ext_resource type="Texture2D" uid="uid://drbf0to8e1x6g" path="res://upgrade cards/speed_boost_card.png" id="2_3ru1o"]
 [ext_resource type="Theme" uid="uid://6thw543k5i1t" path="res://gui.tres" id="2_h8mob"]
-[ext_resource type="Texture2D" uid="uid://b8st1k3f1cm7j" path="res://upgrade cards/rhino_mode_card.png" id="4_1cx38"]
-[ext_resource type="Texture2D" uid="uid://bwfpr0geobxal" path="res://upgrade cards/grab_card.png" id="5_o2jsb"]
-[ext_resource type="FontFile" uid="uid://b8uixwqpu4o2d" path="res://fortyfive/Fortyfive.ttf" id="6_1cx38"]
+[ext_resource type="Texture2D" uid="uid://15no2e4bs86l" path="res://upgrade cards/rhino_mode_card.png" id="4_1cx38"]
+[ext_resource type="Texture2D" uid="uid://b37sbbmw252bx" path="res://upgrade cards/grab_card.png" id="5_o2jsb"]
+[ext_resource type="FontFile" uid="uid://di501odq4xn54" path="res://fortyfive/Fortyfive.ttf" id="6_1cx38"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1cx38"]
 
@@ -40,8 +40,8 @@ tracks/2/path = NodePath("upgrade1:position:x")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-342, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(30, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/3/type = "bezier"
@@ -51,7 +51,7 @@ tracks/3/path = NodePath("upgrade1:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(489, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
@@ -84,8 +84,8 @@ tracks/6/path = NodePath("upgrade3:position:x")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(412, -0.25, 0, 0.25, 0),
+"handle_modes": PackedInt32Array(2),
+"points": PackedFloat32Array(30, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/7/type = "bezier"
@@ -95,7 +95,7 @@ tracks/7/path = NodePath("upgrade3:position:y")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"handle_modes": PackedInt32Array(0),
+"handle_modes": PackedInt32Array(2),
 "points": PackedFloat32Array(489, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
@@ -122,6 +122,11 @@ tracks/9/keys = {
 "times": PackedFloat32Array(0)
 }
 
+[sub_resource type="Animation" id="Animation_87uu4"]
+resource_name = "new_animation"
+length = 0.6
+step = 0.1
+
 [sub_resource type="Animation" id="Animation_o2jsb"]
 resource_name = "upgradesShow"
 length = 0.6
@@ -134,8 +139,8 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(2, 0),
-"points": PackedFloat32Array(-342, 0, 0, 0.25, 0, -342, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.4)
+"points": PackedFloat32Array(30, 0, 0, 0.06666667, -62.000004, -342, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.29999998)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -145,8 +150,8 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(2, 0),
-"points": PackedFloat32Array(489, 0, 0, 0.25, -161.33333, -479, -0.3, -322, 0.25, 0),
-"times": PackedFloat32Array(0, 0.4)
+"points": PackedFloat32Array(489, 0, 0, 0.06666667, -161.33334, -479, -0.3, -322, 0.25, 0),
+"times": PackedFloat32Array(0, 0.29999998)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -157,7 +162,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(2, 0),
 "points": PackedFloat32Array(30, 0, 0, 0.25, 0, 30, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.39999998)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -168,7 +173,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(2, 0),
 "points": PackedFloat32Array(489, 0, 0, 0.25, -161.33333, -479, -0.3, -324, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.39999998)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
@@ -178,8 +183,8 @@ tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(2, 0),
-"points": PackedFloat32Array(412, 0, 0, 0.25, 0, 412, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.6)
+"points": PackedFloat32Array(30, 0, 0, 0.10000001, 63.666668, 412, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -189,8 +194,8 @@ tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(2, 0),
-"points": PackedFloat32Array(489, 0, 0, 0.25, -161.33333, -479, -0.3, -324, 0.25, 0),
-"times": PackedFloat32Array(0, 0.6)
+"points": PackedFloat32Array(489, 0, 0, 0.10000001, -161.33334, -479, -0.3, -324, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -221,8 +226,8 @@ tracks/8/path = NodePath("MeshInstance2D:position:x")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"handle_modes": PackedInt32Array(2, 0),
-"points": PackedFloat32Array(2046, 0, 0, 0.30325484, -1.5, 582, -0.36745158, -249.5, 0.25, 0),
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2046, 0, 0, 0.3, -1.5, 582, -0.24071851, -279.5, 0.25, 0),
 "times": PackedFloat32Array(0, 0.4)
 }
 tracks/9/type = "bezier"
@@ -232,7 +237,7 @@ tracks/9/path = NodePath("MeshInstance2D:position:y")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"handle_modes": PackedInt32Array(2, 0),
+"handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(325, 0, 0, 0.083333336, -0.08332825, 324.50003, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.4)
 }
@@ -240,21 +245,13 @@ tracks/9/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_87uu4"]
 _data = {
 &"RESET": SubResource("Animation_1cx38"),
+&"new_animation": SubResource("Animation_87uu4"),
 &"upgradesShow": SubResource("Animation_o2jsb")
 }
 
-[node name="upgradeSelect" type="Control" unique_id=1126848186]
+[node name="upgradeSelect" type="Control" unique_id=48216679]
 layout_mode = 3
-anchor_left = -1.815
-anchor_top = -1.8030001
-anchor_right = 1.8230001
-anchor_bottom = 1.8210001
-offset_left = 2090.8801
-offset_top = 1168.3441
-offset_right = -948.0962
-offset_bottom = -532.00806
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_0cbif")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1609922351]
@@ -266,9 +263,9 @@ mesh = SubResource("BoxMesh_1cx38")
 [node name="upgrade1" type="Button" parent="." unique_id=1639969930]
 layout_mode = 1
 anchors_preset = -1
-offset_left = -342.0
+offset_left = 30.0
 offset_top = 489.0
-offset_right = 737.9999
+offset_right = 1109.9998
 offset_bottom = 2057.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -284,7 +281,7 @@ anchors_preset = -1
 offset_left = 30.0
 offset_top = 489.0
 offset_right = 1110.0
-offset_bottom = 2056.9993
+offset_bottom = 2056.998
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.25, 0.25)
@@ -295,9 +292,9 @@ icon_alignment = 1
 
 [node name="upgrade3" type="Button" parent="." unique_id=1984793943]
 layout_mode = 0
-offset_left = 412.0
+offset_left = 30.0
 offset_top = 489.0
-offset_right = 1492.0
+offset_right = 1110.0
 offset_bottom = 2057.0002
 scale = Vector2(0.25, 0.25)
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -305,16 +302,13 @@ theme = ExtResource("2_h8mob")
 icon = ExtResource("5_o2jsb")
 icon_alignment = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350405399]
-libraries/ = SubResource("AnimationLibrary_87uu4")
-
 [node name="readyUp" type="Button" parent="." unique_id=955149222]
 texture_filter = 1
 layout_mode = 0
 offset_left = 77.0
 offset_top = 634.34
 offset_right = 1064.0
-offset_bottom = 887.3392
+offset_bottom = 887.3386
 scale = Vector2(0.25, 0.25)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_constants/outline_size = 47
@@ -322,6 +316,10 @@ theme_override_fonts/font = ExtResource("6_1cx38")
 theme_override_font_sizes/font_size = 208
 toggle_mode = true
 text = "Lock In"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1350405399]
+libraries/ = SubResource("AnimationLibrary_87uu4")
+autoplay = &"upgradesShow"
 
 [connection signal="toggled" from="upgrade1" to="." method="_on_upgrade_1_toggled"]
 [connection signal="toggled" from="upgrade2" to="." method="_on_upgrade_2_toggled"]

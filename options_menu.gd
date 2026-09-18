@@ -24,19 +24,19 @@ func _on_back_pressed() -> void:
 	emit_signal("settingsClosed")
 
 func _on_vol_slider_value_changed(value: float) -> void:
-	$volBox.value = $volSlider.value
+	$volBox.value = $volSlider.value * 100
 	Global.userSettings.volume = $volBox.value
 	Global.saveData()
 func _on_vol_box_value_changed(value: float) -> void:
-	$volSlider.value = $volBox.value
+	$volSlider.value = $volBox.value / 100
 	Global.userSettings.volume = $volBox.value
 	Global.saveData()
 func _on_vol_slider_music_value_changed(value: float) -> void:
-	$volBoxMusic.value = $volSliderMusic.value
-	Global.userSettings.musicVol = $volBoxMusic.value
+	$volBoxMusic.value = $volSliderMusic.value * 100
+	Global.userSettings.musicVol = $volBoxMusic.value /100
 	Global.saveData()
 func _on_vol_box_music_value_changed(value: float) -> void:
-	$volSliderMusic.value = $volBoxMusic.value
+	$volSliderMusic.value = $volBoxMusic.value / 100
 	Global.userSettings.musicVol = $volBoxMusic.value
 	Global.saveData()
 func _on_sfx_slider_value_changed(value: float) -> void:

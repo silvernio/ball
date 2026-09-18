@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://6thw543k5i1t"]
 
-[ext_resource type="FontFile" uid="uid://b8uixwqpu4o2d" path="res://fortyfive/Fortyfive.ttf" id="1_gv4p5"]
-[ext_resource type="FontFile" uid="uid://du6t0nvtj3kim" path="res://Fortyfive.ttf" id="2_yy6fd"]
+[ext_resource type="FontFile" uid="uid://di501odq4xn54" path="res://fortyfive/Fortyfive.ttf" id="1_gv4p5"]
+[ext_resource type="FontFile" uid="uid://y3kn5gkh41bd" path="res://Fortyfive.ttf" id="2_yy6fd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xxxrk"]
 bg_color = Color(0.15847227, 0.15847233, 0.15847221, 0.49019608)

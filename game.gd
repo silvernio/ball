@@ -12,8 +12,8 @@ func _ready() -> void:
 	connect("settingsClosed", _settingsClosed)
 	Global.running = not Global.race
 	Global.isReady = true
-	#if Global.running == false:
-		#$upgradeSelect/AnimationPlayer.play("upgradesShow")
+	if Global.running == false:
+		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 	#else:
 
 func _on_spawn(_index):
