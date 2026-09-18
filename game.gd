@@ -12,18 +12,24 @@ func _ready() -> void:
 	connect("settingsClosed", _settingsClosed)
 	Global.running = not Global.race
 	Global.isReady = true
-	if Global.running == false:
-		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
+	if Global.running == true:
+		$CanvasLayer/Control/AnimationPlayer.play("transOut")
+	#if Global.running == false:
+		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 	#else:
 
 func _on_spawn(_index):
 	$CanvasLayer/Control/AnimationPlayer.play("transOut")
-	await get_tree().create_timer(.8).timeout
-	if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
-		$CanvasLayer/Control/AnimationPlayer.seek(0, true)
-	$CanvasLayer/Control/start.text = "3"
-	$CanvasLayer/Control/AnimationPlayer.play("startTimer")
-
+	if Global.running == false or Global.upgrading == true:
+		Global.upgrading = true
+		await get_tree().create_timer(0.2).timeout
+		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
+	else:
+		await get_tree().create_timer(0.8).timeout
+		if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
+			$CanvasLayer/Control/AnimationPlayer.seek(0, true)
+		$CanvasLayer/Control/start.text = "3"
+		$CanvasLayer/Control/AnimationPlayer.play("startTimer")
 
 func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed('ready'):

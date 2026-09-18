@@ -5,12 +5,12 @@ extends Control
 @export var race: CheckBox
 
 func _ready() -> void:
-	print(Network.activeModifiers.keys().pick_random())
+	#print_debug(Network.activeModifiers.keys().pick_random())
 	if Global.leavingScene == 'lobby':
 		$AnimationPlayer.play("resetFromLobby")
 		await $AnimationPlayer.animation_finished
 		$AnimationPlayer.play_backwards("sceneTransition")
-		#print("wat")
+		#print_debug("wat")
 		#await get_tree().create_timer(0.5).timeout
 		#$AnimationPlayer.play_backwards("settingsPressed")
 	elif Global.leavingScene == 'menu':

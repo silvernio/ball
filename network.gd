@@ -110,7 +110,7 @@ func get_url_parameters() -> Dictionary:
 	return params
 
 func _ready() -> void:
-	print('connecting')
+	print_debug('connecting')
 	client.connect_socket()
 	lastOptions = options.duplicate()
 
@@ -133,7 +133,7 @@ func _process(delta: float) -> void:
 
 func _on_socket_io_socket_connected(_ns: String) -> void:
 	#update connection state and request network id
-	print('connected!')
+	print_debug('connected!')
 	connected = true
 	client.emit('getId')
 	
@@ -232,7 +232,7 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		lastOptions = options.duplicate()
 		options_changed.emit()
 	elif event == 'upgradeSelect':
-		print("ahfjhd")
+		print_debug("ahfjhd")
 		if Global.scene != 'upgrade':
 			Global.scene = 'upgrade'
 			upgradeTime.emit()
@@ -302,11 +302,11 @@ func _on_socket_io_socket_disconnected() -> void:
 func _player_finished():
 	if Global.toast == true:
 		#pass
-		#print('first')
+		#print_debug('first')
 		if client.lobby.finished.length == client.lobby.players.length:
 			Global.toast = false
-		#print('second')
-		#print(client.lobby.finished.length)
-		#print(client.lobby.players.length)
+		#print_debug('second')
+		#print_debug(client.lobby.finished.length)
+		#print_debug(client.lobby.players.length)
 			client.emit('upgrades')
 			

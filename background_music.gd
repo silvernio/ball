@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	volume_db = -5 / (Global.userSettings.volume)
 	#else:
 	volume_db = volume_db / (Global.userSettings.musicVol)
-	#print(float(-5 / (Global.userSettings.volume / 100)))
+	#print_debug(float(-5 / (Global.userSettings.volume / 100)))
 	#if Global.userSettings.musicVol <= 10:
 		#playing = false
 	#elif Global.userSettings.volume <= 10:

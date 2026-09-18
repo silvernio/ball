@@ -19,7 +19,7 @@ func _ready() -> void:
 	Network.emit('getOptions')
 
 func animation_fix():
-	#print($AnimationPlayer.get_animation_list())
+	#print_debug($AnimationPlayer.get_animation_list())
 	if Global.leavingScene == 'menu':
 		$AnimationPlayer.play("sceneOut")
 	elif Global.leavingScene == 'game':

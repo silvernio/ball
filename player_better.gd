@@ -17,8 +17,8 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	#print(angular_velocity)
-	print($"../camPivot/Camera3D".fov)
+	#print_debug(angular_velocity)
+	print_debug($"../camPivot/Camera3D".fov)
 	# get mouse to be used :O
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 		
 	# gravity
 	#if is_on_floor() == false:
-		#print($Camera3D.fov)
+		#print_debug($Camera3D.fov)
 		#gravity = 1
 		#gravity = lerpf(gravity, 50, 0.8 * gravity)
 		#if angular_velocity.y <= -0.00000001:

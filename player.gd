@@ -118,7 +118,7 @@ func _physics_process(delta: float) -> void:
 	
 	var addSpeed = clamp(1 + moveSpeed ** 2 / 3, 1, 10)
 	
-	#print(Vector2(velocity.x, velocity.z).normalized())
+	#print_debug(Vector2(velocity.x, velocity.z).normalized())
 	#var diffModifier = 1 + (1 - (Vector2(velocity.x, velocity.z).normalized().dot(Vector2(wasd.x, -wasd.z)) + 1) / 2) 
 	var diffModifier = 1
 	
@@ -180,7 +180,7 @@ func _physics_process(delta: float) -> void:
 				tangent_vel *= wall_friction
 				velocity = tangent_vel + normal_vel
 				
-			#print(1 - abs(normal.dot(Vector3.UP)))
+			#print_debug(1 - abs(normal.dot(Vector3.UP)))
 			#bounce_vel *= abs(normal.dot(Vector3.UP))
 			#var factor = abs(normal.dot(Vector3.UP)) ** 0.1
 			#velocity = Vector3(velocity.x * factor, velocity.y, velocity.z * factor)

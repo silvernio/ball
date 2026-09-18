@@ -24,3 +24,7 @@ func _on_upgrade_2_toggled(toggled_on: bool) -> void:
 	pass # Replace with function body.
 func _on_upgrade_3_toggled(toggled_on: bool) -> void:
 	pass # Replace with function body.
+
+
+func _on_ready_up_pressed() -> void:
+	Global.isReady = true
