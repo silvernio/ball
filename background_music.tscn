@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bcatevliq7jdf"]
 
-[ext_resource type="AudioStream" uid="uid://bhv6watjfrytr" path="res://BREAKCORE.mp3" id="1_4m5bw"]
+[ext_resource type="AudioStream" uid="uid://bhv6watjfrytr" path="res://sound and music/BREAKCORE.mp3" id="1_4m5bw"]
 [ext_resource type="Script" uid="uid://ctvyuehi1mcb8" path="res://background_music.gd" id="2_l3d1b"]
 
 [node name="backgroundMusic" type="AudioStreamPlayer" unique_id=1035763715]

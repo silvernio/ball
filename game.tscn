@@ -15,8 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://d4c24myevc1gn" path="res://images/loading to game.png" id="12_80cx4"]
 [ext_resource type="PackedScene" uid="uid://b4n0jm82clx84" path="res://options_menu.tscn" id="12_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://b5ttfshfbgfli" path="res://leavingGame.png" id="13_215e1"]
-[ext_resource type="AudioStream" uid="uid://8a327vjwpi7s" path="res://smoke.mp3" id="15_80cx4"]
-[ext_resource type="AudioStream" uid="uid://cvftdcbjoh2hv" path="res://veryloudairhorn.mp3" id="16_e8heu"]
+[ext_resource type="AudioStream" uid="uid://8a327vjwpi7s" path="res://sound and music/smoke.mp3" id="15_80cx4"]
+[ext_resource type="AudioStream" uid="uid://cvftdcbjoh2hv" path="res://sound and music/veryloudairhorn.mp3" id="16_e8heu"]
 [ext_resource type="PackedScene" uid="uid://cu4hxnto5mnhq" path="res://upgrade_select.tscn" id="17_e8heu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e2o6t"]

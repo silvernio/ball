@@ -1,5 +1,6 @@
 extends AudioStreamPlayer
 
+var oldVol
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,9 +9,11 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#if -5 / (Global.userSettings.volume / 100) <= volume_db / (Global.userSettings.musicVol / 100):
-	volume_db = -5 / (Global.userSettings.volume)
+	oldVol = -5 + linear_to_db(Global.userSettings.volume / 100)
 	#else:
-	volume_db = volume_db / (Global.userSettings.musicVol)
+	volume_db = linear_to_db(Global.userSettings.musicVol / 100) + oldVol
+	#print(linear_to_db(Global.userSettings.volume / 100))
+	#print(volume_db)
 	#print_debug(float(-5 / (Global.userSettings.volume / 100)))
 	#if Global.userSettings.musicVol <= 10:
 		#playing = false

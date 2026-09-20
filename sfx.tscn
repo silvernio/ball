@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dnng6pgsn8h8e"]
 
-[ext_resource type="AudioStream" uid="uid://dwypa7jicuxlh" path="res://click.mp3" id="1_a0u1m"]
+[ext_resource type="AudioStream" uid="uid://dwypa7jicuxlh" path="res://sound and music/click.mp3" id="1_a0u1m"]
 [ext_resource type="Script" uid="uid://b8ffpgrmb60yo" path="res://sfx.gd" id="1_ycbqo"]
-[ext_resource type="AudioStream" uid="uid://by5j8gk3yydw3" path="res://browse.mp3" id="2_ycbqo"]
-[ext_resource type="AudioStream" uid="uid://b24407gr6yap1" path="res://soundreality-wind-lake-sfx-522908.mp3" id="4_fd8gk"]
+[ext_resource type="AudioStream" uid="uid://by5j8gk3yydw3" path="res://sound and music/browse.mp3" id="2_ycbqo"]
+[ext_resource type="AudioStream" uid="uid://b24407gr6yap1" path="res://sound and music/soundreality-wind-lake-sfx-522908.mp3" id="4_fd8gk"]
 
 [node name="sfx" type="Node" unique_id=892496859]
 script = ExtResource("1_ycbqo")
