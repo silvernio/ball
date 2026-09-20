@@ -40,9 +40,6 @@ func _on_spawn(_index):
 		Global.time = 0
 		player.reset()
 		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
-		if Network.globalMod != null:
-			$CanvasLayer/Control/AnimationPlayer.play("globalModDetected")
-			#await get_tree().create_timer(3).timeout
 		#if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
 			#$CanvasLayer/Control/AnimationPlayer.seek(0, true)
 		if Global.running == false or Global.upgrading == true:
@@ -52,6 +49,9 @@ func _on_spawn(_index):
 			#await get_tree().create_timer(0.2).timeout
 			#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 		#else:
+	if Network.globalMod != null:
+		$CanvasLayer/Control/AnimationPlayer.play("globalModDetected")
+		await get_tree().create_timer(3).timeout
 	$CanvasLayer/Control/start.text = "3"
 	$CanvasLayer/Control/AnimationPlayer.play("startTimer")
 	
@@ -76,7 +76,8 @@ func _physics_process(_delta: float) -> void:
 	
 	if Global.startTime != -1 and unix_timestamp_ms >= Global.startTime:
 		if Network.globalMod != null:
-			await get_tree().create_timer(5).timeout
+			pass
+			await get_tree().create_timer(3).timeout
 		if from == "menu":
 			await get_tree().create_timer(1).timeout
 		Global.startTime = -1
