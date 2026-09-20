@@ -59,7 +59,10 @@ func _physics_process(_delta: float) -> void:
 		#start.text = ''
 	
 	if Global.startTime != -1 and unix_timestamp_ms >= Global.startTime:
-		await get_tree().create_timer(1).timeout
+		if Network.globalMod != null:
+			await get_tree().create_timer(5).timeout
+		else:
+			await get_tree().create_timer(2).timeout
 		Global.startTime = -1
 		Global.time = 0
 		Global.running = true

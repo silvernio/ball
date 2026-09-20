@@ -643,10 +643,11 @@ offset_bottom = 656.0
 texture = ExtResource("4_iu37i")
 expand_mode = 1
 
-[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
 [connection signal="button_down" from="start" to="." method="_clicksound"]
+[connection signal="button_down" from="start" to="." method="_on_start_button_down"]
 [connection signal="mouse_entered" from="start" to="." method="_on_mouse_hover"]
 [connection signal="pressed" from="join" to="." method="_on_join_pressed"]
+[connection signal="toggled" from="readyUp" to="." method="_on_ready_up_toggled"]
 [connection signal="item_selected" from="playerList" to="." method="_clicksound"]
 [connection signal="value_changed" from="track/seed/seed" to="." method="_on_seed_value_changed"]
 [connection signal="mouse_entered" from="track/seed/randomise" to="." method="_on_mouse_hover"]

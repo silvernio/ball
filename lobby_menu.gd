@@ -155,3 +155,13 @@ func _on_join_pressed() -> void:
 	$AnimationPlayer.play("goToGame")
 	await get_tree().create_timer(0.5).timeout
 	Network.client.emit('joinLate')
+
+func _on_ready_up_toggled(toggled_on: bool) -> void:
+	if toggled_on == true:
+		$readyUp.text = "Ready"
+		Global.isReady = not Global.isReady
+		print(Global.isReady)
+	else:
+		$readyUp.text = "Ready Up"
+		Global.isReady = not Global.isReady
+		print(Global.isReady)
