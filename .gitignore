@@ -10,3 +10,4 @@ build/
 *.png.import
 *.jpg.import
 **/*.import
+addons/webrtc_native/lib/~libwebrtc_native.windows.template_debug.x86_64.dll

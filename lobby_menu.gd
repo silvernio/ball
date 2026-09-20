@@ -16,6 +16,17 @@ func _ready() -> void:
 	for username in players:
 		$playerList.add_item(username)
 		
+	#print($start.visible)
+	if Network.names[Network.names.keys()[0]] == Global.username:
+		$start.visible = true
+		$readyUp.visible = false
+	else:
+		$start.visible = false
+		$readyUp.visible = true
+		if Global.running == true:
+			$start.visible = false
+			$join.visible = true
+			$readyUp.visible = false
 	Network.emit('getOptions')
 
 func animation_fix():
@@ -139,3 +150,8 @@ func _on_global_val_value_changed(value: float) -> void:
 
 func _on_randomise_settings_toggled(toggled_on: bool) -> void:
 	Network.options.randomiseSettings = toggled_on
+
+func _on_join_pressed() -> void:
+	$AnimationPlayer.play("goToGame")
+	await get_tree().create_timer(0.5).timeout
+	Network.client.emit('joinLate')

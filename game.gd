@@ -5,30 +5,39 @@ extends Node3D
 @export var start: Label
 
 func _ready() -> void:
+	print(Network.upgrades)
 	Network.upgradeTime.connect(_upgrades)
-	Network.newRace.connect(_global_modifier)
+	#Network.newRace.connect(_global_modifier)
 	Network.spawn.connect(_on_spawn)
 	BackgroundMusic.bus = "inGame"
 	connect("settingsClosed", _settingsClosed)
 	Global.running = not Global.race
 	Global.isReady = true
-	if Global.running == true:
+	if Global.upgrading == true:
 		$CanvasLayer/Control/AnimationPlayer.play("transOut")
-	#if Global.running == false:
+	#elif Global.running == false:
+		#$CanvasLayer/Control/AnimationPlayer.play("transOut")
+	elif Global.upgrading == true:
+		pass
+		#$CanvasLayer/Control/AnimationPlayer.play("transOut")
+		#await get_tree().create_timer(0.2).timeout
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
-	#else:
 
 func _on_spawn(_index):
+	#print("sopawn")
 	$CanvasLayer/Control/AnimationPlayer.play("transOut")
+	await get_tree().create_timer(0.8).timeout
+	if Network.globalMod != null:
+		$CanvasLayer/Control/AnimationPlayer.play("globalModDetected")
+		await get_tree().create_timer(3).timeout
+	#if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
+		#$CanvasLayer/Control/AnimationPlayer.seek(0, true)
 	if Global.running == false or Global.upgrading == true:
 		pass
 		#Global.upgrading = true
 		#await get_tree().create_timer(0.2).timeout
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 	#else:
-	await get_tree().create_timer(0.8).timeout
-	if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
-		$CanvasLayer/Control/AnimationPlayer.seek(0, true)
 	$CanvasLayer/Control/start.text = "3"
 	$CanvasLayer/Control/AnimationPlayer.play("startTimer")
 
@@ -72,9 +81,10 @@ func _physics_process(_delta: float) -> void:
 	else:
 		$CanvasLayer/Control/loading.visible = false
 
-func _global_modifier():
-	if Network.globalMod != null:
-		$CanvasLayer/Control/AnimationPlayer.play("globalModDetected")
+#func _global_modifier():
+	#$CanvasLayer/Control/AnimationPlayer.play("globalModDetected")
+	
+
 
 func _on_settings_button_pressed() -> void:
 	Sfx.get_node("clickSFX").play()

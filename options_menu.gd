@@ -5,9 +5,9 @@ signal settingsClosed
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$volBox.value = Global.userSettings.volume
-	$volSlider.value = Global.userSettings.volume
+	$volSlider.value = Global.userSettings.volume / 100
 	$volBoxMusic.value = Global.userSettings.musicVol
-	$volSliderMusic.value = Global.userSettings.musicVol
+	$volSliderMusic.value = Global.userSettings.musicVol / 100
 	$sfxBox.value = Global.userSettings.sfxVol
 	$sfxSlider.value = Global.userSettings.sfxVol
 	$fovBox.value = Global.userSettings.fov
@@ -31,14 +31,16 @@ func _on_vol_box_value_changed(value: float) -> void:
 	$volSlider.value = $volBox.value / 100
 	Global.userSettings.volume = $volBox.value
 	Global.saveData()
+
 func _on_vol_slider_music_value_changed(value: float) -> void:
 	$volBoxMusic.value = $volSliderMusic.value * 100
-	Global.userSettings.musicVol = $volBoxMusic.value /100
+	Global.userSettings.musicVol = $volBoxMusic.value
 	Global.saveData()
 func _on_vol_box_music_value_changed(value: float) -> void:
 	$volSliderMusic.value = $volBoxMusic.value / 100
 	Global.userSettings.musicVol = $volBoxMusic.value
 	Global.saveData()
+
 func _on_sfx_slider_value_changed(value: float) -> void:
 	$sfxBox.value = $sfxSlider.value
 	Global.userSettings.sfxVol = $sfxBox.value
@@ -47,6 +49,7 @@ func _on_sfx_box_value_changed(value: float) -> void:
 	$sfxSlider.value = $sfxBox.value
 	Global.userSettings.sfxVol = $sfxBox.value
 	Global.saveData()
+
 func _on_fov_slider_value_changed(value: float) -> void:
 	#print_debug(Global.userSettings.fov)
 	$fovBox.value = $fovSlider.value
