@@ -34,12 +34,13 @@ func _ready() -> void:
 
 func _on_spawn(_index):
 	print_debug("spawn")
-	if Global.leavingScene != "upgrade":
+	if Global.leavingScene != "upgrade" and from == 'menu':
+		from = 'game'
 		$CanvasLayer/Control/AnimationPlayer.play("transOut")
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		await get_tree().create_timer(0.8).timeout
 	else:
-		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
+		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		Global.isReady = true
 		Global.time = 0
 		player.reset()
@@ -80,7 +81,7 @@ func _physics_process(_delta: float) -> void:
 	if Global.startTime != -1 and unix_timestamp_ms >= Global.startTime:
 		if Network.globalMod != null:
 			pass
-			await get_tree().create_timer(3).timeout
+			await get_tree().create_timer(4).timeout
 		if from == "menu":
 			await get_tree().create_timer(1).timeout
 		Global.startTime = -1
