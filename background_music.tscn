@@ -9,4 +9,5 @@ pitch_scale = 1.1
 autoplay = true
 bus = &"menu"
 playback_type = 1
+parameters/looping = true
 script = ExtResource("2_l3d1b")
