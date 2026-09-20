@@ -70,7 +70,7 @@ func _physics_process(delta: float) -> void:
 		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	#if velocity.length() < 10:
 	$speed_lines.material.set_shader_parameter("line_density", min(velocity.length()/30, 0.7))
-	Sfx.get_node("wind_sfx").volume_db = min(velocity.length()*1.4-60, -20)
+	Sfx.get_node("wind_sfx").volume_db = min(velocity.length()*1.4-50, -20)
 	Sfx.get_node("wind_sfx").pitch_scale = min(velocity.length()/40+1, 2)
 	#print_debug(min(max(velocity.length()/40-10, 0)+1, 2))
 	
