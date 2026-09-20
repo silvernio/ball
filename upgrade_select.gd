@@ -4,6 +4,8 @@ var up1
 var up2
 var up3
 
+signal lockIn
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	up1 = Network.activeModifiers.keys().pick_random()
@@ -27,4 +29,7 @@ func _on_upgrade_3_toggled(toggled_on: bool) -> void:
 
 
 func _on_ready_up_pressed() -> void:
-	Global.isReady = true
+	$AnimationPlayer.play("exit")
+	await get_tree().create_timer(0.6).timeout
+	lockIn.emit()
+	

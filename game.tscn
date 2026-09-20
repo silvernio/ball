@@ -1058,3 +1058,4 @@ playback_type = 1
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Control/pauseMenu/Panel/close button" to="." method="_clicksound"]
 [connection signal="settingsClosed" from="CanvasLayer/Control/optionsMenu" to="." method="_settingsClosed"]
+[connection signal="lockIn" from="CanvasLayer/Control/upgradeSelect" to="." method="_on_upgrade_select_lock_in"]

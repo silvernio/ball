@@ -16,7 +16,7 @@ func _ready() -> void:
 	for username in players:
 		$playerList.add_item(username)
 		
-	#print($start.visible)
+	#print_debug($start.visible)
 	if Network.names[Network.names.keys()[0]] == Global.username:
 		$start.visible = true
 		$readyUp.visible = false
@@ -39,7 +39,7 @@ func animation_fix():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var readied = true
-	print(Network.data)
+	#print_debug(Network.data)
 	#for player in Network.lobby
 
 func _addPlayer(_id, username):
@@ -162,8 +162,8 @@ func _on_ready_up_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:
 		$readyUp.text = "Ready"
 		Global.isReady = not Global.isReady
-		print(Global.isReady)
+		print_debug(Global.isReady)
 	else:
 		$readyUp.text = "Ready Up"
 		Global.isReady = not Global.isReady
-		print(Global.isReady)
+		print_debug(Global.isReady)
