@@ -29,8 +29,8 @@ func _ready() -> void:
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 	else:
 		#pass
-		$CanvasLayer/Control/AnimationPlayer.play("transOut")
-		#Global.isReady = true
+		#$CanvasLayer/Control/AnimationPlayer.play("transOut")
+		Global.isReady = true
 
 func _on_spawn(_index):
 	print_debug("spawn")
@@ -39,7 +39,6 @@ func _on_spawn(_index):
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		await get_tree().create_timer(0.8).timeout
 	else:
-		print("a")
 		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		Global.isReady = true
 		Global.time = 0
@@ -94,10 +93,10 @@ func _physics_process(_delta: float) -> void:
 		var wind = Sfx.get_child(2)
 		if BackgroundMusic.bus == "inGame":
 			BackgroundMusic.bus = "pause"
-			wind.bus = "pause"
+			#wind.bus = "pause"
 		elif BackgroundMusic.bus == "pause":
 			BackgroundMusic.bus = "inGame"
-			wind.bus = "inGame"
+			#wind.bus = "inGame"
 		$CanvasLayer/Control/pauseMenu.visible = !$CanvasLayer/Control/pauseMenu.visible
 	
 	$CanvasLayer/Control/loading/name.text = Global.progressName
@@ -137,6 +136,7 @@ func _settingsClosed():
 	$CanvasLayer/Control/pauseMenu.visible = true
 
 func _upgrades():
+	#pass
 	$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 
 func _on_mouse_hover() -> void:

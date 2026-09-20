@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dx32ny7ktawxe" path="res://main_menu.gd" id="1_7vrkn"]
 [ext_resource type="Theme" uid="uid://6thw543k5i1t" path="res://gui.tres" id="3_fu7sn"]
 [ext_resource type="PackedScene" uid="uid://b4n0jm82clx84" path="res://options_menu.tscn" id="3_jix8l"]
-[ext_resource type="AudioStream" uid="uid://xcfcn5ml2ai5" path="res://sound and music/BALL.mp3" id="4_jix8l"]
+[ext_resource type="AudioStream" uid="uid://diyyou2v18e35" path="res://sound and music/BALL.mp3" id="4_jix8l"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_jix8l"]
 
@@ -823,15 +823,15 @@ bus = &"BALL"
 playback_type = 1
 
 [connection signal="settingsClosed" from="optionsMenu" to="." method="_settingsClosed"]
-[connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="button_down" from="play" to="." method="_on_play_button_down"]
+[connection signal="button_down" from="play" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="play" to="." method="_on_mouse_hover"]
 [connection signal="text_changed" from="lobby" to="." method="_on_lobby_text_changed"]
 [connection signal="text_changed" from="username" to="." method="_on_username_text_changed"]
 [connection signal="mouse_entered" from="settings" to="." method="_on_mouse_hover"]
-[connection signal="pressed" from="settings" to="." method="_clicksound"]
 [connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="settings" to="." method="_clicksound"]
 [connection signal="mouse_entered" from="race" to="." method="_on_mouse_hover"]
-[connection signal="toggled" from="race" to="." method="_clicksound"]
 [connection signal="toggled" from="race" to="." method="_on_race_toggled"]
+[connection signal="toggled" from="race" to="." method="_clicksound"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
