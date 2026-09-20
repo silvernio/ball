@@ -232,7 +232,7 @@ func _on_socket_io_event_received(event: String, msg: Variant, _ns: String) -> v
 		lastOptions = options.duplicate()
 		options_changed.emit()
 	elif event == 'upgradeSelect':
-		print_debug("ahfjhd")
+		#print_debug("ahfjhd")
 		if Global.scene != 'upgrade':
 			Global.scene = 'upgrade'
 			upgradeTime.emit()

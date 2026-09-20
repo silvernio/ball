@@ -28,18 +28,22 @@ func _ready() -> void:
 		#await get_tree().create_timer(0.2).timeout
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("upgradesShow")
 	else:
-		Global.isReady = true
+		#pass
+		$CanvasLayer/Control/AnimationPlayer.play("transOut")
+		#Global.isReady = true
 
 func _on_spawn(_index):
 	print_debug("spawn")
-	if from == 'menu':
+	if Global.leavingScene != "upgrade":
 		$CanvasLayer/Control/AnimationPlayer.play("transOut")
+		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		await get_tree().create_timer(0.8).timeout
 	else:
+		print("a")
+		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		Global.isReady = true
 		Global.time = 0
 		player.reset()
-		$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		#if $CanvasLayer/Control/AnimationPlayer.current_animation == "globalModDetected":
 			#$CanvasLayer/Control/AnimationPlayer.seek(0, true)
 		if Global.running == false or Global.upgrading == true:
@@ -54,7 +58,7 @@ func _on_spawn(_index):
 		await get_tree().create_timer(3).timeout
 	$CanvasLayer/Control/start.text = "3"
 	$CanvasLayer/Control/AnimationPlayer.play("startTimer")
-	
+	#await get_tree().create_timer(2).timeout
 	
 
 func _physics_process(_delta: float) -> void:
@@ -141,9 +145,10 @@ func _clicksound():
 	Sfx.get_node("clickSFX").play()
 
 func _on_upgrade_select_lock_in() -> void:
+	print("ads")
 	#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
+	Global.leavingScene = "upgrade"
 	Global.isReady = true
-	from = 'upgrade'
 	#Global.running = true
 	Global.time = 0
 	player.reset()

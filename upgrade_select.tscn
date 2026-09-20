@@ -650,7 +650,7 @@ mesh = SubResource("BoxMesh_87uu4")
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1748470736]
 layout_mode = 0
 offset_left = 1176.0
-offset_right = 2327.9998
+offset_right = 2327.9993
 offset_bottom = 647.999
 texture = ExtResource("2_o2jsb")
 expand_mode = 1

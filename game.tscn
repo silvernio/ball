@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://8a327vjwpi7s" path="res://sound and music/smoke.mp3" id="15_80cx4"]
 [ext_resource type="AudioStream" uid="uid://cvftdcbjoh2hv" path="res://sound and music/veryloudairhorn.mp3" id="16_e8heu"]
 [ext_resource type="PackedScene" uid="uid://cu4hxnto5mnhq" path="res://upgrade_select.tscn" id="17_e8heu"]
+[ext_resource type="AudioStream" uid="uid://dhapjwcl32blr" path="res://sound and music/countdown_va.mp3" id="19_boyg6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e2o6t"]
 sky_top_color = Color(0.33153802, 0.8575765, 0.85415184, 1)
@@ -415,7 +416,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_215e1"]
 resource_name = "startTimer"
-length = 4.1
+length = 4.2
 step = 0.1
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -424,9 +425,9 @@ tracks/0/path = NodePath("../start:scale:x")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(2, 0, 0, 0, 0, 0, 2, 0, 0, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.033333335, -0.166665, 0, 0, 0.8, -0.033333335, -0.166665, 0, 0, 2.055, -0.033333343, -0.17583336, 0, 0, 1.8, -0.033333343, -0.17583336, 0, 0, 3, -0.13333333, -0.15749998, 0, 0, 2.8, -0.13166666, 0, 0.0016666651, 0, 4, -0.0016666651, -0.00091575, 0.15000002, 0.08241759, 4.5, -0.100000024, -0.04999999, 0, 0, 1e-05, -0.06666665, 0.5499984, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.2, 2, 2.2, 2.99, 3.1, 3.9, 4.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.3000001, 2.1, 2.3, 3.09, 3.1999998, 4.0000005, 4.2000003)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -435,9 +436,9 @@ tracks/1/path = NodePath("../start:scale:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(2, 0, 0, 0, 0, 0, 2, 0, 0, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(1e-05, -0.25, 0, 0.25, 0, 1, -0.033333335, -0.166665, 0, 0, 0.8, -0.033333335, -0.166665, 0, 0, 2, -0.033333343, -0.17583336, 0, 0, 1.8, -0.033333343, -0.17583336, 0, 0, 3, -0.13333333, -0.15749998, 0, 0, 2.8, -0.13166666, 0, 0.0016666651, 0, 4, -0.0016666651, -0.00091575, 0.15000002, 0.08241759, 4.5, -0.100000024, -0.04999999, 0, 0, 1e-05, -0.06666665, 0.5499984, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.2, 2, 2.2, 2.99, 3.1, 3.9, 4.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.3000001, 2.1, 2.3, 3.09, 3.1999998, 4.0000005, 4.2000003)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -446,9 +447,9 @@ tracks/2/path = NodePath("../start:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"handle_modes": PackedInt32Array(2, 0, 0, 2, 0, 0, 2, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(0.40142572, -0.25, 0, 0.25, 0, -0.2443461, -0.033333335, 0.107628636, 0, 0, -0.2443461, -0.033333335, 0.107628636, 0, 0, 0.37524578, -0.033333343, -0.10326532, 0, 0, 0.37524578, -0.033333343, -0.10326532, 0, 0, -0.2268928, -0.13333333, 0.10035643, 0, 0, -0.2268928, -0.13166666, 0, 0.0016666651, 0, 0, -0.01666665, -0.037815467, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.2, 2, 2.2, 2.99, 3.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.3000001, 2.1, 2.3, 3.09, 3.1999998)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -457,9 +458,9 @@ tracks/3/path = NodePath("../start:modulate:r")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2, 0, 2, 0, 0, 2, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.13333334, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0, 1, -0.165, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0, 1, -0.016666662, 0, 0, 0, 1, -0.13166666, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.01, 2, 2.01, 2.2, 2.99, 3.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.11, 2.1, 2.11, 2.3, 3.09, 3.1999998)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
@@ -468,9 +469,9 @@ tracks/4/path = NodePath("../start:modulate:g")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2, 0, 2, 0, 0, 2, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.13333334, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0, 1, -0.165, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0, 1, -0.016666662, 0, 0, 0, 1, -0.13166666, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.01, 2, 2.01, 2.2, 2.99, 3.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.11, 2.1, 2.11, 2.3, 3.09, 3.1999998)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -479,9 +480,9 @@ tracks/5/path = NodePath("../start:modulate:b")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2, 0, 2, 0, 0, 2, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.13333334, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0, 1, -0.165, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0, 1, -0.016666662, 0, 0, 0, 1, -0.13166666, 0, 0.0016666651, 0, 1, -0.016666662, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.01, 2, 2.01, 2.2, 2.99, 3.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.11, 2.1, 2.11, 2.3, 3.09, 3.1999998)
 }
 tracks/6/type = "bezier"
 tracks/6/imported = false
@@ -490,38 +491,38 @@ tracks/6/path = NodePath("../start:modulate:a")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"handle_modes": PackedInt32Array(0, 0, 2, 0, 2, 0, 0, 2, 0),
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0.21568628, -0.13333334, 0, 0.0016666651, 0, 1, -0.016666662, -0.11568629, 0, 0, 0.21568628, -0.165, 0, 0.0016666651, 0, 1, -0.016666662, -0.11568629, 0, 0, 1, -0.016666662, -0.11568629, 0, 0, 0.21568628, -0.13166666, 0, 0.0016666651, 0, 1, -0.016666662, -0.11568629, 0, 0),
-"times": PackedFloat32Array(0, 0.2, 1, 1.01, 2, 2.01, 2.2, 2.99, 3.1)
+"times": PackedFloat32Array(0.1, 0.29999998, 1.1, 1.11, 2.1, 2.11, 2.3, 3.09, 3.1999998)
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("../../../Smoke:playing")
+tracks/7/path = NodePath("../start:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 3.1000001, 3.2, 3.3, 3.4, 3.5, 3.6000001),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.1, 4.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true, true, true, true, true, true, true, true, true]
+"values": [true, false]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
-tracks/8/enabled = false
-tracks/8/path = NodePath("../../../Veryloudairhorn:playing")
+tracks/8/enabled = true
+tracks/8/path = NodePath("../start:text")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(2.98),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.1, 1.1, 2.1, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [true]
+"values": ["3", "2", "1", "BEGIN"]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../start:visible")
+tracks/9/path = NodePath("../../../CountdownVa:playing")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
@@ -529,18 +530,6 @@ tracks/9/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-tracks/10/type = "value"
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/path = NodePath("../start:text")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": ["3", "2", "1", "BEGIN"]
 }
 
 [sub_resource type="Animation" id="Animation_hve3p"]
@@ -1045,6 +1034,10 @@ stream = ExtResource("16_e8heu")
 volume_db = -3.775
 panning_strength = 0.0
 bus = &"pause"
+playback_type = 1
+
+[node name="CountdownVa" type="AudioStreamPlayer" parent="." unique_id=671502364]
+stream = ExtResource("19_boyg6")
 playback_type = 1
 
 [connection signal="body_entered" from="finish" to="finish" method="_on_body_entered"]

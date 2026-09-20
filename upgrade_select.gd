@@ -29,7 +29,8 @@ func _on_upgrade_3_toggled(toggled_on: bool) -> void:
 
 
 func _on_ready_up_pressed() -> void:
+	Global.leavingScene = "upgrade"
 	$AnimationPlayer.play("exit")
-	await get_tree().create_timer(0.6).timeout
+	await get_tree().create_timer(0.8).timeout
 	lockIn.emit()
 	
