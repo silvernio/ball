@@ -38,7 +38,9 @@ func animation_fix():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var readied = true
+	print(Network.data)
+	#for player in Network.lobby
 
 func _addPlayer(_id, username):
 	$playerList.add_item(username)
