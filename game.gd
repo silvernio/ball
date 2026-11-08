@@ -12,7 +12,9 @@ func _ready() -> void:
 	#Network.newRace.connect(_global_modifier)
 	Network.spawn.connect(_on_spawn)
 	BackgroundMusic.bus = "inGame"
-	connect("settingsClosed", _settingsClosed)
+	$CanvasLayer/Control/TextureRect2.visible = false
+	if not $CanvasLayer/Control/optionsMenu.settingsClosed.is_connected(_settingsClosed):
+		$CanvasLayer/Control/optionsMenu.settingsClosed.connect(_settingsClosed)
 	Global.running = not Global.race
 	#Global.isReady = true
 	if Global.running == true:
@@ -39,6 +41,8 @@ func _on_spawn(_index):
 		$CanvasLayer/Control/AnimationPlayer.play("transOut")
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		await get_tree().create_timer(0.8).timeout
+		$CanvasLayer/Control/TextureRect.visible = false
+		$CanvasLayer/Control/MeshInstance2D3.visible = false
 	else:
 		#$CanvasLayer/Control/upgradeSelect/AnimationPlayer.play("exit2")
 		Global.isReady = true
@@ -124,6 +128,7 @@ func _on_lobby_button_pressed() -> void:
 	BackgroundMusic.bus = "menu"
 	Sfx.get_node("clickSFX").play()
 	Global.scene = 'lobby'
+	$CanvasLayer/Control/TextureRect2.visible = true
 	$CanvasLayer/Control/AnimationPlayer.play("leave game")
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_file("res://lobby_menu.tscn")

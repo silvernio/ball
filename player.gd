@@ -43,12 +43,13 @@ func _ready() -> void:
 	username.text = Global.username
 	lastPosition = position
 	Sfx.get_node("wind_sfx").play()
+	$speed_lines.visible = false
 	
 func tp(pos):
 	var dif = pos - position
 	position += dif
 	lastPosition += dif
-	core.global_position = global_position
+	reset_physics_interpolation()
 	camera.position += dif
 	camera.followPos += dif
 
@@ -56,10 +57,11 @@ func reset():
 	position = Vector3()
 	lastPosition = Vector3()
 	velocity = Vector3()
+	reset_physics_interpolation()
 	camera.position = camera.offset
 	camera.look_at(position + Vector3(0, 0.2, 0))
 	camera.followPos = camera.offset + position
-	camera.followQuat = camera.quaternion
+	camera.update_follow_quat(0.0, true)
 
 func _physics_process(delta: float) -> void:
 	speed = Network.options.speed / 100
@@ -69,20 +71,30 @@ func _physics_process(delta: float) -> void:
 	#elif Input.is_action_pressed("esc"):
 		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	#if velocity.length() < 10:
-	if Global.running == true:
-		#Sfx.get_node("wind_sfx").playing = true
-		$speed_lines.material.set_shader_parameter("line_density", min(velocity.length()/30, 0.7))
-		Sfx.get_node("wind_sfx").volume_db = min(velocity.length()*1.4-50, -20)
-		Sfx.get_node("wind_sfx").pitch_scale = min(velocity.length()/40+1, 2)
+	if Global.running:
+		var speed_val = velocity.length()
+		var density = min(speed_val / 30.0, 0.7)
+		if density > 0.05:
+			if not $speed_lines.visible:
+				$speed_lines.visible = true
+			$speed_lines.material.set_shader_parameter("line_density", density)
+		else:
+			if $speed_lines.visible:
+				$speed_lines.visible = false
+		Sfx.get_node("wind_sfx").volume_db = min(speed_val * 1.4 - 50, -20)
+		Sfx.get_node("wind_sfx").pitch_scale = min(speed_val / 40.0 + 1, 2)
 	else:
+		if $speed_lines.visible:
+			$speed_lines.visible = false
 		Sfx.get_node("wind_sfx").volume_db = -100
-		$speed_lines.material.set_shader_parameter("line_density", min(velocity.length()/30, 0))
 	#print_debug(min(max(velocity.length()/40-10, 0)+1, 2))
 	
+	var currentDist = Global.distance
 	if floort > 0:
-		Global.distance = $'../track'.get_distance(global_position)
+		currentDist = $'../track'.get_distance(global_position)
+		Global.distance = currentDist
 	
-	var trackType = $'../track'.get_track_type(global_position)
+	var trackType = $'../track'.get_track_type_from_distance(currentDist)
 	
 	var bounceModifier = 1
 	var frictionModifier = 1
@@ -146,7 +158,7 @@ func _physics_process(delta: float) -> void:
 	var bounce_count = 0
 
 	while remaining_delta > 0 and bounce_count < max_bounces:
-		var collision = move_and_collide(velocity * remaining_delta, false, 0.001, true)
+		var collision = move_and_collide(velocity * remaining_delta, false, 0.001, false)
 		
 		if not collision:
 			break
@@ -161,40 +173,37 @@ func _physics_process(delta: float) -> void:
 				collider.send_msg('launch', [launch.x, launch.y, launch.z], true)
 		
 		var is_floor = normal.dot(Vector3.UP) > 0.5
-		var is_wall = normal.dot(Vector3.UP) < 0.5 and normal.dot(Vector3.UP) > -0.5
+		var is_wall = normal.dot(Vector3.UP) <= 0.5 and normal.dot(Vector3.UP) > -0.5
 		
 		if is_floor:
-			floort = 0.2
+			floort = 0.25
 		
 		var bounciness = 0.3 * bounceModifier
 		var velocity_along_normal = velocity.dot(normal)
 		
 		if velocity_along_normal < 0:
-			var bounce_vel = velocity_along_normal * normal * (1 + bounciness * bounceFactor)
-			if trackType == 3:
-				bounce_vel -= normal;
-			
 			if is_wall:
 				var tangent_vel = velocity - (velocity.dot(normal) * normal)
 				var normal_vel = velocity.dot(normal) * normal
-				
-				#var wall_friction = 0.95 ** frictionModifier
-				
 				var wall_friction = 0.99 ** frictionModifier
-				
 				tangent_vel *= wall_friction
 				velocity = tangent_vel + normal_vel
-				
-			#print_debug(1 - abs(normal.dot(Vector3.UP)))
-			#bounce_vel *= abs(normal.dot(Vector3.UP))
-			#var factor = abs(normal.dot(Vector3.UP)) ** 0.1
-			#velocity = Vector3(velocity.x * factor, velocity.y, velocity.z * factor)
-			velocity -= bounce_vel
-			bounceFactor = 1
+			
+			if trackType == 3 or velocity_along_normal < -1.5:
+				var bounce_vel = velocity_along_normal * normal * (1.0 + bounciness * bounceFactor)
+				if trackType == 3:
+					bounce_vel -= normal
+				velocity -= bounce_vel
+				bounceFactor = 1.0
+			else:
+				velocity -= velocity_along_normal * normal
 		
-		#velocity = velocity.slide(normal)
-		
-		remaining_delta *= (1.0 - collision.get_travel().length() / (oldVel * delta).length())
+		var travel_len = collision.get_travel().length()
+		var expected_len = (oldVel * delta).length()
+		if expected_len > 0.0001:
+			remaining_delta *= (1.0 - travel_len / expected_len)
+		else:
+			break
 		
 		if remaining_delta < 0.001:
 			break
@@ -230,36 +239,17 @@ func _physics_process(delta: float) -> void:
 	Network.data.y = position.y
 	Network.data.z = position.z
 	
-	Network.data.rx = mesh.rotation.x
-	Network.data.ry = mesh.rotation.y
-	Network.data.rz = mesh.rotation.z
-	
-	core.global_position = global_position
-	
-func _process(delta: float) -> void:
-	#rotate player by velocity
 	mesh.rotate(Vector3(0, 0, 1), -velocity.x * delta * 2)
 	mesh.rotate(Vector3(1, 0, 0), velocity.z * delta * 2)
 	
-	#var alpha = Engine.get_physics_interpolation_fraction()
-	#core.global_position = core.global_position.lerp(lastPosition.lerp(global_position, alpha), clamp(delta * 50, 0, 1))
-	
-	
-	#scaleVel += (Vector3.ONE - scaleNode.scale) / 10
-	#scaleNode.scale += scaleVel
-	#var squash = clamp(velocity.length() * 0.3, 0, 0.5)
-	#var dir = velocity.normalized()
-	#var target_scale = Vector3.ONE
-	#if velocity.length() > 0.01:
-		#var right = dir.cross(Vector3.UP).normalized()
-		#target_scale = Vector3.ONE - dir * squash + right * squash * 0.5
-	#scaleNode.scale = scaleNode.scale.lerp(target_scale, delta * 10)
-	
-	#core.global_position = core.global_position.lerp(global_position, clamp(delta * 20, 0, 1))
-	if Network.fps < 100:
-		core.global_position = global_position
-	
-	$core/Label3D.fixed_size = camera.global_position.distance_to($core/Label3D.global_position) > 1
+	Network.data.rx = mesh.rotation.x
+	Network.data.ry = mesh.rotation.y
+	Network.data.rz = mesh.rotation.z
+
+func _process(_delta: float) -> void:
+	var should_fix = camera.global_position.distance_to($core/Label3D.global_position) > 1.0
+	if $core/Label3D.fixed_size != should_fix:
+		$core/Label3D.fixed_size = should_fix
 
 func _input(event):
 	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -274,11 +264,11 @@ func _launch(vel):
 func _spawn(index):
 	position = Vector3(index * 0.25, 0, 0)
 	velocity = Vector3()
-	core.global_position = global_position
+	reset_physics_interpolation()
 	respawnTime = -1
 	
 	camera.followPos = camera.offset + position
-	camera.followQuat = Quaternion()
+	camera.update_follow_quat(0.0, true)
 	
 	#camera.position = camera.offset + position
 	#camera.look_at(position + Vector3(0, 0.2, 0))
